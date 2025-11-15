@@ -1,0 +1,73 @@
+/* comments in CSS look like this */
+
+/* to add CSS styles to an HTML document, add a link in the <head> as follows:
+		<link rel="stylesheet" href="styles.css">
+*/
+
+/*
+CSS styles have a left-hand side and right-hand size as follows:
+		property-name: property-value;
+*/
+
+/* to add styles to the body, write body, then add CSS styles in open brackets */
+body {
+	background-color: black;
+	color: white;
+	margin: 100px;
+}
+
+/* add styles to all HTML elements with a given TAG, e.g., h1 */
+h1 {
+	color: hotpink;
+}
+
+/* colors can be defined with color names or hex codes */
+h2 {
+	color: #54f6ae;
+	font-family: cursive;
+}
+
+a {
+	color: skyblue;
+	text-decoration: underline;
+	text-decoration-color: tomato;
+}
+
+/* to style tables, experiment with adding styles to the table, tr, and td tags separately */
+table {
+	border: 1px solid #f4a32c;
+	width: 500px;
+}
+
+td {
+	border: 5px dotted #a3f42c;
+	height: 50px;
+	text-align: center;
+}
+
+/* <hr>s are kind of weird to style: you need to style them via borders, like this: */
+hr {
+	border: none;
+	border-top: 3px solid #ee58c9;
+
+	/* the syntax for margin (or padding) can be any of the following:
+			margin: allsides;
+			margin: topbottom leftright;
+			margin: top right bottom left;
+	*/
+	margin: 40px 0;
+}
+
+/* add styles to all HTML elements with a given CLASS, e.g., class="aboutMe",
+	by writing a period before the class name */
+.aboutMe {
+	color: indigo;
+	font-family: fantasy;
+}
+
+/* to apply a style to an elements with a particular TAG within a particular CLASS,
+	including to override previous styles defined for that tag,
+	write a period with the class name, a space, and then the tag */
+.aboutMe a {
+	color: indigo;
+}
