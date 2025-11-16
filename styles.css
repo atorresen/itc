@@ -38,7 +38,7 @@ em {
 
 table, th, td {
 	text-align: left;
-	vertical-align: top;
+	vertical-align: bottom;
 	table-layout: fixed;
 	width: 100%;
 }
