@@ -17,10 +17,11 @@ h3 {
 }
 
 h5 {
-	margin-bottom: 0px;
+	margin-bottom: 0;
+	font-size: 0.85rem;
 }
 
-p, li, th, td, h4, h5 {
+p, li, th, td, h4 {
 	font-size: 1rem;
 }
 
@@ -37,6 +38,7 @@ em {
 }
 
 table, th, td {
+	color: white;
 	text-align: left;
 	vertical-align: bottom;
 	table-layout: fixed;
