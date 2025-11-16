@@ -45,6 +45,10 @@ table, th, td {
 	width: 100%;
 }
 
+th {
+	padding-top: 10px;
+}
+
 td {
 	background-color: #84ADE8;
 	border-radius: 10px;
