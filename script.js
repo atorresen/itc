@@ -1,4 +1,35 @@
-var cssQ = false;
+// save HTML content as text (to be displayed when HTML is removed)
+var contentDiv = document.getElementById("content");
+var allElements = contentDiv.getElementsByTagName("*");
+var allContent = "";
+for (var i = 0; i < allElements.length; i++) {
+	allContent = allContent + allElements[i].innerText;
+};
+var textOnly = document.getElementById("textOnly");
+textOnly.innerText = allContent;
+
+// toggle HTML
+var htmlQ = true;
+function addHTML () {
+	var head = document.getElementsByTagName("head")[0];
+	var button = document.getElementById("html");
+	if (htmlQ) {
+		// if HTML is already added, remove it
+		contentDiv.style.display = "none";
+		textOnly.style.display = "block";
+		button.style.backgroundColor = "";
+	} else {
+		// if HTML is not added, add it
+		contentDiv.style.display = "block";
+		textOnly.style.display = "none";
+		button.style.backgroundColor = "#628AD4";
+	};
+	htmlQ = !htmlQ;
+}
+
+
+// toggle CSS
+var cssQ = true;
 function addCSS () {
 	var head = document.getElementsByTagName("head")[0];
 	var button = document.getElementById("css");
@@ -14,6 +45,8 @@ function addCSS () {
 	cssQ = !cssQ;
 }
 
+
+// toggle JS
 var jsQ = false;
 function addJS () {
 	var head = document.getElementsByTagName("head")[0];
@@ -31,6 +64,7 @@ function addJS () {
 }
 
 
+// collapse functionality for weekly schedules
 function collapse () {
 	// get an array of all of the "week" divs in the schedule
 	var weeks = document.getElementsByClassName("week");

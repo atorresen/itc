@@ -3,16 +3,18 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Intro to Computation -- Wintersession 2026</title>
-		<script src="script.js"></script>
 		<link rel="icon" href="icon.ico">
+		<link rel='stylesheet' href='styles.css' id='csslink'></link>
 	</head>
 	<body>
 
 <div style="text-align: center;">
+	<button id="html" onclick="addHTML()">HTML</button>
 	<button id="css" onclick="addCSS()">CSS</button>
 	<button id="js" onclick="addJS()">JS</button>
 </div>
 
+<div id="content">
 	<h1>Intro to Computation</h1>
 	<h4>Wintersession 2026</h4>
 
@@ -37,6 +39,7 @@
 		<li><a target="_blank" href="https://www.are.na/annemarie-torresen/submissions-itc-w26">
 			Are.na channel
 		</a></li>
+		<br>
 		<li><a target="_blank" href="http://github.com">GitHub</a></li>
 		<li><a target="_blank" href="https://www.w3schools.com/">W3Schools Tutorials</a></li>
 		<li><a target="_blank" href="https://p5js.org/reference">p5.js Reference</a></li>
@@ -107,7 +110,6 @@
 					<li>share progress/discoveries/issues</li>
 					<li>break</li>
 					<li>studio time: submission #1</li>
-					<li>share progress/discoveries/issues</li>
 				</ul>
 				<h5>Homework:</h5>
 				<ul>
@@ -153,7 +155,7 @@
 			<div>
 				<h4>Monday, Jan 12</h4>
 				<ul>
-					<li>group check-ins</li>
+					<li>group check-in</li>
 					<li>p5.js exploration activity</li>
 					<li>break</li>
 					<li>mini-lecture: computational tools</li>
@@ -171,7 +173,7 @@
 
 				<h4>Tuesday, Jan 13</h4>
 				<ul>
-					<li>group check-ins</li>
+					<li>group check-in</li>
 					<li>submission #2 presentations</li>
 					<li>break</li>
 					<li>mini-lecture: p5.js in HTML</li>
@@ -180,6 +182,7 @@
 				</ul>
 				<h5>Homework:</h5>
 				<ul>
+					<li>reading TBD</li>
 					<li>submission #3 due Wednesday 1/21</li>
 				</ul>
 			</div>
@@ -192,7 +195,7 @@
 			<div>
 				<h4>Tuesday, Jan 20</h4>
 				<ul>
-					<li>group check-ins</li>
+					<li>group check-in</li>
 					<li>studio time: submission #3</li>
 					<li>break</li>
 					<li>mini-lecture: <a target="_blank" href="https://docs.google.com/document/d/1cv6xDkzg-7RlxE0a-WkYhzPeEFIfrZlEXrGiTOAshZg/edit?usp=sharing"></a>
@@ -212,7 +215,7 @@
 
 				<h4>Wednesday, Jan 21</h4>
 				<ul>
-					<li>group check-ins</li>
+					<li>group check-in</li>
 					<li>submission #3 presentations</li>
 					<li>break</li>
 					<li>studio time and one-on-one check-ins</li>
@@ -233,7 +236,7 @@
 			<div>
 				<h4>Monday, Jan 26</h4>
 				<ul>
-					<li>group check-ins</li>
+					<li>group check-in</li>
 					<li>Taper examples exploration</li>
 					<li>break</li>
 					<li>lecture/discussion TBD</li>
@@ -242,7 +245,6 @@
 				</ul>
 				<h5>Homework:</h5>
 				<ul>
-					<li></li>
 					<li>submission #4 due tomorrow 1/27:
 						post to <a target="_blank" href="https://www.are.na/annemarie-torresen/submissions-itc-w26">Are.na channel</a>
 					</li>
@@ -252,7 +254,7 @@
 
 				<h4>Tuesday, Jan 27</h4>
 				<ul>
-					<li>group check-ins</li>
+					<li>group check-in</li>
 					<li>lecture/discussion TBD</li>
 					<li>break</li>
 					<li>studio time: final project proposal/experiments</li>
@@ -279,7 +281,7 @@
 			<div>
 				<h4>Monday, Feb 2</h4>
 				<ul>
-					<li>group check in</li>
+					<li>group check-in</li>
 					<li>studio time: final projects</li>
 					<li>one-on-one meetings/debugging</li>
 				</ul>
@@ -293,7 +295,7 @@
 
 				<h4>Tuesday, Feb 3</h4>
 				<ul>
-					<li>group check in</li>
+					<li>group check-in</li>
 					<li>studio time: final projects</li>
 					<li>one-on-one meetings/debugging</li>
 				</ul>
@@ -330,16 +332,16 @@
 					<th>M 1/5</th><th>T 1/6</th><th>W 1/7</th>
 				</tr>
 				<tr>
-					<td>HTML</td>
-					<td>CSS</td>
-					<td>due by 1:00am: sub #1<br><br>Git</td>
+					<td><em>HTML</em></td>
+					<td><em>CSS</em> </td>
+					<td>due by 1:00am: sub #1<br><br><em>Git</em></td>
 				</tr>
 				<tr>
 					<th>M 1/12</th><th>T 1/13</th><th>W 1/4</th>
 				</tr>
 				<tr>
-					<td>p5.js</td>
-					<td>due by 1:00am: sub #2<br><br>p5.js</td>
+					<td><em>p5.js</em></td>
+					<td>due by 1:00am: sub #2<br><br><em>p5.js</em></td>
 					<td class="noclass">no class</td>
 				</tr>
 				<tr>
@@ -347,27 +349,31 @@
 				</tr>
 				<tr>
 					<td class="noclass">no class</td>
-					<td>JavaScript</td>
-					<td>due by 1:00am: sub #3<br><br>JavaScript</td>
+					<td><em>JavaScript</em></td>
+					<td>due by 1:00am: sub #3<br><br><em>JavaScript</em></td>
 				</tr>
 				<tr>
 					<th>M 1/26</th><th>T 1/27</th><th>W 1/28</th>
 				</tr>
 				<tr>
-					<td>TBD (student-led)</td>
-					<td>due by 1:00am: sub #4<br><br>TBD (student-led)</td>
+					<td><em>TBD (student-led)</em></td>
+					<td>due by 1:00am: sub #4<br><br><em>TBD (student-led)</em></td>
 					<td class="noclass">no class</td>
 				</tr>
 				<tr>
 					<th>M 2/2</th><th>T 2/3</th><th>W 2/4</th>
 				</tr>
 				<tr>
-					<td>final project</td>
-					<td>final project</td>
+					<td><em>final project</em></td>
+					<td><em>final project</em></td>
 					<td>due by 1:00am: final project<br>🥳</td>
 				</tr>
 			</table>
 	</div>
+</div>
+<div id="textOnly"></div>
+
+<script src="script.js"></script>
 
 	</body>
 </html>
