@@ -17,7 +17,7 @@ function addHTML () {
 		// if HTML is already added, remove it
 		contentDiv.style.display = "none";
 		textOnly.style.display = "block";
-		button.style.backgroundColor = "";
+		button.style.backgroundColor = "lightgray";
 	} else {
 		// if HTML is not added, add it
 		contentDiv.style.display = "block";
@@ -36,7 +36,7 @@ function addCSS () {
 	if (cssQ) {
 		// if CSS is already linked, unlink it
 		document.getElementById('csslink').remove();
-		button.style.backgroundColor = "";
+		button.style.backgroundColor = "lightgray";
 	} else {
 		// if CSS is not linked, link it
 		head.innerHTML += "<link rel='stylesheet' href='styles.css' id='csslink'></link>";
@@ -48,19 +48,21 @@ function addCSS () {
 
 // toggle JS
 var jsQ = false;
+
+// initially js is disabled (so button is grayed out)
+var jsButton = document.getElementById("js");
+jsButton.style.backgroundColor = "lightgray";
+
 function addJS () {
-	var head = document.getElementsByTagName("head")[0];
-	var button = document.getElementById("js");
-	if (jsQ) {
-		// if JS is already active, reload the page
-		location.reload();
-		button.style.backgroundColor = "lightgray";
-	} else {
-		// if JS is not active, run the collapse() function defined below
-		collapse();
-		button.style.backgroundColor = "#628AD4";
-	};
 	jsQ = !jsQ;
+	var head = document.getElementsByTagName("head")[0];
+	if (jsQ) {
+		jsButton.style.backgroundColor = "#628AD4";
+	} else {
+		jsButton.style.backgroundColor = "lightgray";
+	};
+	// use jsQ to enable/disable the collapse feature defined below
+	collapse();
 }
 
 
@@ -69,21 +71,37 @@ function collapse () {
 	// get an array of all of the "week" divs in the schedule
 	var weeks = document.getElementsByClassName("week");
 
-	// for each week
-	for (var w of weeks) {
-		// add a toggle symbol to the heading for the week
-		var heading = w.getElementsByTagName("h3")[0];
-		heading.innerText = heading.innerText + " ▲";
-		heading.style = "cursor: pointer";
-
-		// trigger the show function when the week's div is clicked
-		w.onclick = show;
-		w.click();
-	}
-
-	// hide the manual table of contents
+	//get the table of contents
 	var toc = document.getElementById("toc");
-	toc.style.display = "none";
+
+	if (jsQ) {
+		// for each week
+		for (var w of weeks) {
+			// add a toggle symbol to the heading for the week
+			var heading = w.getElementsByTagName("h3")[0];
+			heading.innerText = heading.innerText + " ▲";
+			heading.style = "cursor: pointer";
+
+			// trigger the show function when the week's div is clicked
+			w.onclick = show;
+			w.click();
+		}
+
+		// hide the manual table of contents
+		toc.style.display = "none";
+	} else {
+		// remove toggle symbol and un-collapse each week
+		for (var w of weeks) {
+			var heading = w.getElementsByTagName("h3")[0];
+			heading.innerText = heading.innerText.replace(/▼/i, "");
+			var div = w.getElementsByTagName("div")[0]
+			div.style.display = "block";
+			w.onclick = "";
+		}
+
+		// show the manual table of contents
+		toc.style.display = "block";
+	}
 }
 
 function show() {
