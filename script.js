@@ -6,7 +6,6 @@ for (var i = 0; i < allElements.length; i++) {
 	allContent = allContent + allElements[i].innerText;
 };
 var textOnly = document.getElementById("textOnly");
-textOnly.innerText = allContent;
 
 // toggle HTML
 var htmlQ = true;
@@ -16,12 +15,12 @@ function addHTML () {
 	if (htmlQ) {
 		// if HTML is already added, remove it
 		contentDiv.style.display = "none";
-		textOnly.style.display = "block";
+		textOnly.innerText = allContent;
 		button.style.backgroundColor = "lightgray";
 	} else {
 		// if HTML is not added, add it
 		contentDiv.style.display = "block";
-		textOnly.style.display = "none";
+		textOnly.innerText = "";
 		button.style.backgroundColor = "#628AD4";
 	};
 	htmlQ = !htmlQ;
