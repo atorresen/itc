@@ -186,7 +186,7 @@ function randomise(range) {
 function initSnow() {
 	var snowSize = snowMaxSize - snowMinSize;
 	marginBottom = document.body.scrollHeight - 5;
-	marginRight = 2 * document.body.clientWidth;
+	marginRight = window.screen.width;
 
 	for (i = 0; i <= snowMax; i++) {
 		coords[i] = 0;
