@@ -7,6 +7,7 @@
 /*
 CSS styles have a left-hand side and right-hand size as follows:
 		property-name: property-value;
+It is good practice to write each property on a separate line.
 */
 
 /* to add styles to the body, write body, then add CSS styles in open brackets */
@@ -52,7 +53,7 @@ hr {
 
 	/* the syntax for margin (or padding) can be any of the following:
 			margin: allsides;
-			margin: topbottom leftright;
+			margin: top&bottom left&right;
 			margin: top right bottom left;
 	*/
 	margin: 40px 0;
@@ -66,7 +67,7 @@ hr {
 }
 
 /* to apply a style to an elements with a particular TAG within a particular CLASS,
-	including to override previous styles defined for that tag,
+	(including to override previous styles defined for that tag),
 	write a period with the class name, a space, and then the tag */
 .aboutMe a {
 	color: indigo;
