@@ -55,11 +55,6 @@ td {
 	padding: 10px;
 }
 
-/* style class="noclass" (teehee) */
-.noclass {
-	background-color: gray;
-}
-
 a {
 	color: #84ADE8;
 }
@@ -69,7 +64,22 @@ button {
 	border-radius: 5px;
 }
 
-/* style class="week" */
+div {
+	margin: 10px auto;
+	max-width: 800px;
+}
+
+
+/* class styles */
+.note {
+	color: gray;
+}
+
+
+.noclass {
+	background-color: gray;
+}
+
 .week {
 	background-color: #ECF0F4;
 	border-radius: 10px;
@@ -83,9 +93,4 @@ button {
 .week hr {
 	border-top: medium solid #223;
 	margin: 20px -40px;
-}
-
-div {
-	margin: 10px auto;
-	max-width: 800px;
 }
