@@ -62,13 +62,41 @@ hr {
 /* add styles to all HTML elements with a given CLASS, e.g., class="aboutMe",
 	by writing a period before the class name */
 .aboutMe {
-	color: indigo;
-	font-family: fantasy;
+	color: skyblue;
+	font-size: 2rem;
+	/* margin: 20px 40px 60px 80px;
+	border: solid 4px;
+	width: 500px; */
 }
 
 /* to apply a style to an elements with a particular TAG within a particular CLASS,
 	(including to override previous styles defined for that tag),
 	write a period with the class name, a space, and then the tag */
 .aboutMe a {
-	color: indigo;
+	color: pink;
+	text-decoration: none;
 }
+
+/* the CSS box model: margin, padding, and borders */
+/*
+margin: top right bottom left;
+margin: top/bottom right/left;
+margin-top: top;
+margin-right: right;
+*/
+/* ^^^the same works for padding and borders */
+
+/* centering html elements with css can be tricky, because you use 
+different methods to center an element relative to the other elements containing it.
+If you are just working with a div in the body, you can use margin: auto; */
+
+/* for borders, you also need to add a thickness and line style: */
+/* border: solid 4px; */
+
+/* you can also use width and height to set the size of an html element */
+/* width: 800px; */
+
+/* the thickness of padding + margin + border adds up, so you
+need to keep track and use these styles sparingly 
+see more info here: https://www.geeksforgeeks.org/css/css-box-model/
+*/
