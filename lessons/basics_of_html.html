@@ -4,6 +4,9 @@
 		<meta charset="utf-8">
 		<title>Intro to HTML</title>
 		<link rel="stylesheet" href="basics_of_css.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -11,9 +14,12 @@
 
 		<h1>howdy</h1>
 
-		<h2>hello world!</h2>
-
-		<h3>hello world!</h3>
+		<div class="greenText">
+			<h2>hello world!</h2>
+			<h3>hello world!</h3>
+		</div>
+		
+		
 
 		<ol>
 			<li>this</li>
@@ -62,11 +68,31 @@
 
 		<!-- use the <div> tag to organize the structure of your webpage
 		(this will come in handy for applying styles with CSS) -->
-		<div class="aboutMe">
+		<div class="structureIntro">
 			<p>let's learn about the <a href="https://www.geeksforgeeks.org/css/css-box-model/">CSS box model</a></p>
 			<p>margin: space outside of the border</p>
 			<p>padding: space inside the border</p>
 		</div>
+
+
+		<div class="gridContainer">
+			<div class="topRow">this is the top row</div>
+			
+			<div class="middleRow">1</div>
+			<div class="middleRow">2</div>
+			<div class="middleRow">3</div>
+			
+			<div class="bottomRow">hello</div>
+			<div class="bottomRow">world</div>
+
+			<div class="allColumns"></div>
+			<div class="allColumns"></div>
+			<div class="allColumns"></div>
+			<div class="allColumns"></div>
+			<div class="allColumns"></div>
+			<div class="allColumns"></div>
+		</div>
+
 
 	</body>
 </html>
