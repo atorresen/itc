@@ -10,6 +10,10 @@ CSS styles have a left-hand side and right-hand size as follows:
 It is good practice to write each property on a separate line.
 */
 
+:root {
+	--favColor: rgb(233, 190, 0);
+}
+
 /* to add styles to the body, write body, then add CSS styles in open brackets */
 body {
 	background-color: black;
@@ -19,7 +23,7 @@ body {
 
 /* add styles to all HTML elements with a given TAG, e.g., h1 */
 h1 {
-	color: hotpink;
+	color: var(--favColor);
 	font-family: "Lavishly Yours", cursive;
 	font-size: 2.5rem;
 }
@@ -28,6 +32,14 @@ h1 {
 h2 {
 	color: #54f6ae;
 	font-family: cursive;
+}
+
+h4 {
+	color: var(--favColor);
+}
+
+li {
+	color: var(--favColor);
 }
 
 a {
@@ -51,7 +63,7 @@ td {
 /* <hr>s are kind of weird to style: you need to style them via borders, like this: */
 hr {
 	border: none;
-	border-top: 3px solid #ee58c9;
+	border-top: 3px solid var(--favColor);
 
 	/* the syntax for margin (or padding) can be any of the following:
 			margin: allsides;
