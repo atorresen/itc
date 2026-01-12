@@ -7,5 +7,17 @@ function setup() {
 }
 
 function draw() {
-    background("green");
+   background("orange");
+   
+   rectMode(CENTER);
+   if(mouseX < width/2) {
+        fill("pink")
+    } else {
+        fill("yellow")
+    };
+   rect(width/2, height/2, 200, 100);
+   
+   textAlign(CENTER);
+   fill("black");
+   text("this is a p5.js canvas!", width/2, height/2);
 }
