@@ -47,14 +47,10 @@ function addCSS () {
 
 // toggle JS
 var jsQ = false;
-
-// initially js is disabled (so button is grayed out)
-var jsButton = document.getElementById("js");
-jsButton.style.backgroundColor = "lightgray";
-
+addJS();
 function addJS () {
 	jsQ = !jsQ;
-
+	var jsButton = document.getElementById("js");
 	var head = document.getElementsByTagName("head")[0];
 	if (jsQ) {
 		initSnow();
