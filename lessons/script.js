@@ -13,15 +13,19 @@ console.log("hello world!");
 ////      hint: https://www.w3schools.com/js/js_date_methods.asp
 
 
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
 ////// "DOM manipulation", a.k.a. using JS to change HTML /////
+///////////////////////////////////////////////////////////////
 
 //// access elements by id, class, or tag
 
-// let example = document.getElementById("greeting");
-// console.log(example);
+// var example1 = document.getElementById("greeting");
+// console.log(example1);
 
-// document.getElementsByClassName("greenText");
-// document.getElementsByTagName("li");
+// let example2 = document.getElementsByClassName("greenText");
+// console.log(example2);
 
 
 //// get and modify element content
@@ -32,23 +36,22 @@ console.log("hello world!");
 // greeting.innerText = "howdy universe";
 
 
-//// make all list items (li) cyan
-// let listItems = document.getElementsByTagName("li");
+// make all elements with class “greenText” have green text
+// let greenElements = document.getElementsByClassName(“greenText”);
 // //// ^^^ returns an array
-
-// for (let i = 0; i < listItems.length; i++) {
-// 	item = listItems[i];
-// 	item.style.color = "cyan";
+// for (let i = 0; i < green.length; i++) {
+// 	greenElements[i].style.color = "green";
 // }
+
 
 //// write a function that runs when an HTML element is clicked
 
-function turnRed () {
-	let greenElements = document.getElementsByClassName("greenText");
-    for (let i = 0; i < greenElements.length; i++) {
-        greenElements[i].style.color = "red";
-    }
-}
+// function turnRed () {
+// 	let greenElements = document.getElementsByClassName("greenText");
+//     for (let i = 0; i < greenElements.length; i++) {
+//         greenElements[i].style.color = "red";
+//     }
+// }
 
 //// note: the code in the html file that triggers the turnRed() function is:
 //// <button onclick="turnRed()">click me!</button>
