@@ -3,7 +3,7 @@
 //// src pointing to the correct file path, e.g., 
 //// <script src="basics_of_js.js"></script>
 
-console.log("hello world!");
+// console.log("hello world!");
 
 //// exercise: log stuff in the console
 //// -- log your name
@@ -27,32 +27,33 @@ console.log("hello world!");
 // let example2 = document.getElementsByClassName("greenText");
 // console.log(example2);
 
+// let example3 = document.getElementsByTagName("li");
+// console.log(example3);
+
 
 //// get and modify element content
 // let greeting = document.getElementById("greeting");
-// let greetingText = greeting.innerText;
-// console.log(greetingText);
+// console.log(greeting.innerText);
 
 // greeting.innerText = "howdy universe";
 
 
 // make all elements with class “greenText” have green text
-// let greenElements = document.getElementsByClassName(“greenText”);
-// //// ^^^ returns an array
-// for (let i = 0; i < green.length; i++) {
+// let greenElements = document.getElementsByClassName("greenText");
+//// ^^^ returns an array
+// for (let i = 0; i < greenElements.length; i++) {
 // 	greenElements[i].style.color = "green";
 // }
 
 
 //// write a function that runs when an HTML element is clicked
 
-// function turnRed () {
-// 	let greenElements = document.getElementsByClassName("greenText");
-//     for (let i = 0; i < greenElements.length; i++) {
-//         greenElements[i].style.color = "red";
-//     }
-// }
+function turnRed () {
+	let greenElements = document.getElementsByClassName("greenText");
+    for (let i = 0; i < greenElements.length; i++) {
+        greenElements[i].style.color = "red";
+    }
+}
 
 //// note: the code in the html file that triggers the turnRed() function is:
 //// <button onclick="turnRed()">click me!</button>
-
