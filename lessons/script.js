@@ -47,11 +47,11 @@
 
 
 //// write a function that runs when an HTML element is clicked
-
+//// turn all of the list items red
 function turnRed () {
-	let greenElements = document.getElementsByClassName("greenText");
-    for (let i = 0; i < greenElements.length; i++) {
-        greenElements[i].style.color = "red";
+	let listItems = document.getElementsByTagName("li");
+    for (let i = 0; i < listItems.length; i++) {
+        listItems[i].style.color = "red";
     }
 }
 
