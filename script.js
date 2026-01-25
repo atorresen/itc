@@ -45,12 +45,12 @@ function addCSS () {
 }
 
 
-// toggle JS
+// toggle JS (initialize off)
 var jsQ = false;
-addJS();
+var jsButton = document.getElementById("js");
+jsButton.style.backgroundColor = "lightgray";
 function addJS () {
 	jsQ = !jsQ;
-	var jsButton = document.getElementById("js");
 	var head = document.getElementsByTagName("head")[0];
 	if (jsQ) {
 		initSnow();

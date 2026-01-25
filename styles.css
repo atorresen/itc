@@ -95,3 +95,8 @@ div {
 	border-top: medium solid #223;
 	margin: 20px -40px;
 }
+
+/* snow day alert */
+.alert {
+	background-color: cyan;
+}
