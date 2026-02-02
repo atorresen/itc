@@ -100,3 +100,11 @@ div {
 .alert {
 	background-color: cyan;
 }
+
+#critOrder, #pickOrder {
+	min-height: 1.2rem;
+	font-weight: bold;
+	color: #628AD4;
+	position: inline;
+	white-space: nowrap;
+}

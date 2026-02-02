@@ -392,6 +392,8 @@
 				<hr>
 
 				<h4 id="2/4">Wednesday, Feb 4</h4>
+				<button onclick="pickOrder()">random order</button>
+				<p id="critOrder"></p>
 				<ul>
 					<li>final crit</li>
 					<li>break</li>
@@ -451,6 +453,14 @@
 <div id="textOnly"></div>
 
 <script src="script.js"></script>
-
+<script>
+	const roster = ['Alisha', 'Ed', 'Evelyn', 'Lucas', 'Nicole', 'Omar', 'Sonia', 'Stef', 'Sue'];
+	function pickOrder() {
+		let res = roster.sort(
+			function(a, b) {return 0.5 - Math.random()}
+		);
+		document.getElementById('critOrder').innerHTML = res;
+	}
+</script>
 	</body>
 </html>
