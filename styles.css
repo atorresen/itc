@@ -1,110 +1,63 @@
 body {
-	background-color: #223;
-	color: #ECF0F4;
-	font-family: monospace;
-	max-width: 800px;
-	margin: 10px auto 50px auto;
-	padding: 10px;
+    background-color: #111;
+    color: antiquewhite;
+    font-family: monospace;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 95%
 }
 
-h2 {
-	color: #CBDCF6;
+:root {
+  --web: red;
+  --gen: green;
+  --sof: blue;
+  --fin: white;
+  --border: aliceblue;
 }
 
-h3 {
-	color: #628AD4;
-	font-size: 1.2rem;
-}
-
-h5 {
-	margin-bottom: 0;
-	font-size: 0.85rem;
-}
-
-p, li, th, td, h4 {
-	font-size: 1rem;
-}
-
-hr {
-	border: none;
-	border-top: medium dotted #444450;
-	margin: 40px 0;
-}
-
-em {
-	font-style: normal;
-	font-weight: bold;
-	color: #ECF0F4;
-}
-
-table, th, td {
-	color: white;
-	text-align: left;
-	vertical-align: bottom;
-	table-layout: fixed;
-	width: 100%;
-}
-
-th {
-	padding-top: 10px;
-}
-
-td {
-	background-color: #84ADE8;
-	border-radius: 10px;
-	padding: 10px;
+h4 {
+    margin-bottom: 0;
 }
 
 a {
-	color: #84ADE8;
+    color: lightblue;
 }
 
-button {
-	background-color: #628AD4;
-	border-radius: 5px;
+hr {
+    border: none;
+    border-top: 2px solid var(--border);
+    margin: 16px 0;
 }
 
 div {
-	margin: 10px auto;
-	max-width: 800px;
+    box-shadow: 0 2px var(--border);
+    padding: 8px;
 }
 
-
-/* class styles */
-.note {
-	color: gray;
+.web {
+    border-right: 10px solid var(--web);
 }
-
-
-.noclass {
-	background-color: gray;
-	color: black;
+.webgen {
+    border: 0 solid transparent;
+    border-image: linear-gradient(to bottom, var(--web), var(--gen)) 1;
+    border-right-width: 10px;
 }
-
-.week {
-	background-color: #ECF0F4;
-	border-radius: 10px;
-	box-shadow: 10px 10px #84ADE8;
-	color: black;
-	margin: -20px 0;
-	padding: 10px 40px;
+.gen {
+    border-right: 10px solid var(--gen);
 }
-
-/* style <hr> contained within class="week" */
-.week hr {
-	border-top: medium solid #223;
-	margin: 20px -40px;
+.gensof {
+    border: 0 solid transparent;
+    border-image: linear-gradient(to bottom, var(--gen), var(--sof)) 1;
+    border-right-width: 10px;
 }
-
-/* snow day alert */
-.alert {
-	background-color: cyan;
+.sof {
+    border-right: 10px solid var(--sof);
 }
-
-#critOrder, #pickOrder {
-	min-height: 1.2rem;
-	font-weight: bold;
-	color: #628AD4;
-	position: inline;
-	white-space: nowrap;
+.soffin {
+    border: 0 solid transparent;
+    border-image: linear-gradient(to bottom, var(--sof), var(--fin)) 1;
+    border-right-width: 10px;
+}
+.fin {
+    border-right: 10px solid var(--fin);
 }
