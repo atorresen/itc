@@ -25,6 +25,7 @@ nav {
     background: var(--headerBG);
     padding: 20px 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: right;
     align-items: center;
     gap: 20px;
@@ -50,7 +51,7 @@ p {
 
 .home {
     margin-right: auto;
-    color: var(--headerText);
+    color: var(--mainBG);
 }
 
 .here {
@@ -87,7 +88,7 @@ li {
     background: var(--contentBG);
     border-radius: 5px;
     max-width: 900px;
-    margin: 50px auto;
+    margin: 50px auto !important; /* prioritize centering when .content is paired with .codeblock */
     padding: 30px;
     border: 2px solid var(--headerText);
 }
@@ -118,6 +119,11 @@ code {
 
 .comment {
     color: var(--commentText);
+}
+
+.answer {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 img.small {

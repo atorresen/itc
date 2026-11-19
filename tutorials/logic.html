@@ -4,20 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolean Logic</title>
-    <link rel="icon" href="../images/icon.ico">
+    <link rel="icon" href="../icon.ico">
     <link rel="stylesheet" href="tutorials.css">
 </head>
 <body>
+    <div class="content codeblock">
+        Example sketch: <a href="https://editor.p5js.org/atorresen/sketches/1Bjiig2V2">https://editor.p5js.org/atorresen/sketches/1Bjiig2V2</a>
+    </div>
     <div class="content">
         <h1>Boolean Logic</h1>
+        <p>
+            George Boole (1815-1864) wanted everything to be either <b>true</b> or <b>false</b>, with nothing in between. And so, he formalized <b>Boolean logic</b>: a way of computing with binary truth values, i.e. true or false.
+        </p>
+        <p>
+            The word <b>boolean</b> refers to a variable that can only have two possible values: <code>true</code> (<code>1</code>) or <code>false</code> (<code>0</code>).
+        </p>
+    </div>
+    <div class="content">
+        <h1>Comparison operators</h1>
+        <p>
+            The results of comparisons – checking equality or inequality – are booleans. For example:
+        </p>
+        <h2>equality (<span class="code">==</span>)</h2>
+        <div class="codeblock">
+            1 == 1 &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span><br>
+            1 == 2 &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span>
+        </div>
+        <h2>inequalities (<span class="code">&lt;, >, &lt;=, >=</span>)</h2>
+        <div class="codeblock">
+            1 > 0 &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span><br>
+            5 &lt; 2 &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span><br>
+            5 > 5 &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span><br>
+            5 >= 5 &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Logical operators</h1>
+        <p>
+            TODO
+        </p>
+        <h2>and (<span class="code">&&</span>)</h2>
+        <div class="codeblock">
+            true && true &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span><br>
+            false && false &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span><br>
+            true && false &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span>
+        </div>
+        <h2>or (<span class="code">||</span>)</h2>
+        <div class="codeblock">
+            true || true &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span><br>
+            false || false &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span><br>
+            true || false &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span>
+        </div>
+        <h2>not (<span class="code">!</span>)</h2>
+        <div class="codeblock">
+            !true &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span><br>
+            !false &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span>
+        </div>
     </div>
     <div class="content">
         <h1>Conditional Statements</h1>
-        
+        <p>
+            TODO
+        </p>
+        <h2>if</h2>
+        <div class="codeblock">
+            if (A) {<br>
+            &nbsp; &nbsp; <span class="comment">
+                // code evaluates if <span class="answer" onclick="show(this, 'A is true')">?</span>
+            </span><br>
+            } 
+        </div>
+        <h2>else</h2>
+        <div class="codeblock">
+            if (A) {<br>
+            &nbsp; &nbsp; <span class="comment">
+                // code evaluates if <span class="answer" onclick="show(this, 'A is true')">?</span>
+            </span><br>
+            } else {<br>
+                &nbsp; &nbsp; <span class="comment">
+                    // code evaluates if <span class="answer" onclick="show(this, 'A is not true')">?</span>
+                </span><br>
+            }
+        </div>
+        <h2>else if</h2>
+        <div class="codeblock">
+            if (A) {<br>
+            &nbsp; &nbsp; <span class="comment">
+                // code evaluates if <span class="answer" onclick="show(this, 'A is true')">?</span>
+            </span><br>
+            } else if (B) {<br>
+            &nbsp; &nbsp; <span class="comment">
+                // code evaluates if <span class="answer" onclick="show(this, 'B is true')">?</span>
+            </span><br>
+            } else {<br>
+            &nbsp; &nbsp; <span class="comment">
+                // code evaluates if <span class="answer" onclick="show(this, 'neither A nor B is true')">?</span>
+            </span><br>
+            }
+        </div>
     </div>
     <div class="content">
         <h1>State Variables</h1>
-        
+        <p>
+            State variables are booleans that keep track of the “state” of a system, e.g., whether a condition is true or false. State variables are useful tools for referencing the same condition in multiple places. Here is an example in p5.js:
+        </p>
+        <div class="codeblock">
+            <span class="comment">
+                // define a global variable displayQ that will be true when the rectangle is displayed and false when the rectangle is hidden
+            </span><br>
+            let displayQ = false;<br>
+            <br>
+            <span class="comment">
+                // update the value of displayQ when the mouse is pressed using mousePressed()
+            </span><br>
+            function mousePressed () {<br>
+            &nbsp; displayQ = !displayQ; <span class="comment">// any time the mouse is pressed, change displayQ to its opposite</span><br>
+            }<br>
+            <br>
+            <span class="comment">// refer to the value of displayQ within draw()</span><br>
+            draw() {<br>
+            &nbsp; if (displayQ) {<br>
+            &nbsp; &nbsp; rect(50, 50, 100, 200);<br>
+            &nbsp; }<br>
+            }
+        </div>
+        <p>
+            Note: I usually add a Q to the end of my state variable names to indicate that their value is either “true” or “false” (i.e., the answer to a true or false Question)
+        </p>
+    </div>
+    <div class="content">
+        <h1>Practice</h1>
+        <p>Create five p5.js sketches that have the following behaviors:</p>
+        <ol>
+            <li>
+                displays a rectangle only when the mouse is being held down 
+                <span class="reveal" onclick="show(this, 'mousePressed')">(hint)/span>
+            </li>
+            <li>
+                displays a rectangle only when the mouse is located on the bottom right half of the canvas
+            </li>
+            <li>
+                displays a rectangle only after the mouse has been clicked 10 times
+                <span class="reveal" onclick="show(this, 'define a variable to store the number of times the mouse has been clicked')">(hint)/span>
+            </li>
+            <li>
+                displays a black rectangle that turns red if the mouse has been clicked once, blue if the mouse has been clicked twice, and green if the mouse has been clicked three or more times
+            </li>
+            <li>
+                displays a rectangle that toggles between being red and white any time the left side of the canvas is clicked
+            </li>
+        </ol>
+        <p><b>Bonus:</b></p>
+        <ol start="6">
+            <li>
+                create a rectangular button that logs “you clicked me N times” in the console whenever the rectangle is clicked, where N is the number of times the button has been clicked
+            </li>
+            <li>
+                create a rectangle with a “drag-and-drop” effect
+            </li>
+            <li>
+                write your own description (like the ones above) of a simple sketch that updates based on a conditional, then have a classmate figure out how to code it
+            </li>
+        </ol>
+        <p>
+            Once you have attemped the exercises on your own, you can <a href="logic_solutions.html">see sample solutions here</a>. Note: there may be many different correct solutions! These are just examples.
+
+        </p>
     </div>
     <script src="script.js"></script>
 </body>

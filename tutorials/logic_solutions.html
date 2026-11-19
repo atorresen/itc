@@ -1,0 +1,104 @@
+<!-- 1 -->
+function draw() {
+    background(220);
+    if (mouseIsPressed) {
+        rect(100, 100, 100);
+    }
+}
+
+
+<!-- 2 -->
+function draw() {
+    background(220);
+    if (mouseX > width/2 && mouseY > height/2) {
+        rect(100, 100, 100);
+    }
+}
+
+
+<!-- 3 -->
+let numClicks = 0;
+
+function draw() {
+    background(220);
+    if (numClicks >= 10) {
+        rect(100, 100, 100);
+    }
+}
+
+function mousePressed() {
+	numClicks++;
+}
+
+
+<!-- 4 -->
+let numClicks = 0;
+
+function draw() {
+    background(220);
+    let color = “black”;
+    if (numClicks == 1) {
+        color = “red”;
+    } else if (numClicks == 2){
+        color = “blue”;
+    } else {
+        color = “green”;
+    };
+    fill(color);
+    rect(100, 100, 100);
+}
+
+function mousePressed() {
+	numClicks++;
+}
+
+
+<!-- 5 -->
+let redQ = true;
+
+function draw() {
+    background(220);
+    if (redQ) {
+        fill("red")
+    } else {
+        fill("white")
+    };
+    rect(100, 100, 100)
+}
+
+function mousePressed() {
+	if (mouseX < width/2) {
+		redQ = !redQ
+    }
+}
+
+
+
+<!-- Bonus: -->
+
+<!-- 6. -->
+function draw() {
+background(220);
+rect(50, 50, 100, 100);
+}
+
+let numClicks = 0;
+
+function mousePressed() {
+ 	numClicks++;
+let word = " time";
+if (
+  	(mouseX > 50) && (mouseX < 150) && (mouseY > 50) && (mouseY < 150)
+) {
+		if (numClicks == 1) {
+     			word =  " time"
+   		 } else {
+    			 word =  " times"
+    		}
+      	console.log("you clicked me " + numClicks + word);
+}
+}
+
+<!-- 7. see Lauren McCarthy 03_23 (the example is for a circle, but you can get the idea :) ) -->
+
+<!-- 8. created by students :)  -->
