@@ -1,4 +1,4 @@
-<!-- sketch_1 -->
+/////// sketch_1 ///////
 function setup() {
   createCanvas(480, 270);
   stroke("red"); 
@@ -11,7 +11,7 @@ function draw() {
 }
 
 
-<!-- sketch_2 -->
+/////// sketch_2 ///////
 function setup() {
   createCanvas(270, 270);
   noFill();
@@ -24,7 +24,7 @@ function draw() {
 }
 
 
-<!-- sketch_3 -->
+/////// sketch_3 ///////
 function setup() {
   createCanvas(200, 300);
   noStroke();
@@ -47,7 +47,7 @@ function draw() {
 }
 
 
-<!-- sketch_4 -->
+/////// sketch_4 ///////
 function setup() {
   createCanvas(480, 270);
   noStroke();
@@ -79,7 +79,7 @@ function draw() {
 }
 
 
-<!-- sketch_5 -->
+/////// sketch_5 ///////
 function setup() {
   createCanvas(480, 270);
   ellipseMode(CENTER);

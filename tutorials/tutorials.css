@@ -71,13 +71,29 @@ ul {
     list-style-type: square;
 }
 
-ol > li::marker {
+ol > li::marker, figcaption {
   font-weight: bold;
 }
 
 li {
     margin-bottom: 15px;
     font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+    ol, ul, li {
+        padding-left: 8px;
+    }
+    img {
+        padding: 0;
+        max-width: 100%;
+    }
+    .flexImg img {
+        width: 100%;
+    }
+    .codeblock {
+        font-size: 0.75rem;
+    }
 }
 
 .letterList {
@@ -113,10 +129,6 @@ code {
     color: var(--replaceText);
 }
 
-.nobr {
-    white-space: nowrap;
-}
-
 .comment {
     color: var(--commentText);
 }
@@ -144,6 +156,7 @@ img {
 /* place image to the right of text in a column */
 .flexImg {
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
 }
 
