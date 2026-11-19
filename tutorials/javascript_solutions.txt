@@ -1,0 +1,24 @@
+///// log your name
+console.log("AnneMarie");
+
+
+
+///// log the numbers 1-20 without typing each number individually
+for (let i = 1; i <= 20; i++) {
+   console.log(i);
+};
+
+
+
+///// log "beep" if the current time is more than 30 minutes after the hour
+///// log "boop" if the current time is less than or equal to 30 minutes after the hour
+///// hint: https://www.w3schools.com/js/js_date_methods.asp
+
+// Date() returns the current date and time
+const date = new Date();
+// getMinutes() returns the minutes of the current time
+if (date.getMinutes() > 30) {
+   console.log("beep");
+} else {
+   console.log("boop");
+}

@@ -10,16 +10,148 @@
 <body>
     <div class="content">
         <h1>Getting started with JavaScript</h1>
+        <ol>
+            <li>
+                Create a new folder on your desktop. Name it something like <code>learning_js</code>.
+            </li>
+            <li>
+                Open the folder in VS Code. Add a new <code>index.html</code> file.<br>
+                Copy <b><a href="javascript_example.txt">this example code</a></b> into the <code>index.html</code> file.
+            </li>
+            <li>
+                Create another new file in the <code>learning_js</code> folder and name it <code>script.js</code>.
+            </li>
+            <li>
+                Add the following line of code at the end of the <code>body</code> of your .html file, just before the closing <code>&lt;/body></code> tag:
+                <div class="codeblock">
+                    &lt;script src="script.js">&lt;/script>
+                </div>
+            </li>
+            <li>
+                Add the following line of code in the <code>script.js</code> file:
+                <div class="codeblock">
+                    console.log("hello world!");
+                </div>
+            </li>
+            <li>
+                Save both files, then open the html file in Firefox or Google Chrome.
+            </li>
+            <li>
+                <b>Inspect</b> the page (right click anywhere on the webpage and click <code>Inspect</code>, or press <code>Ctrl+Shift+I</code> / <code>Command+Option+I</code>) to open the developer tools.
+            </li>
+            <li>
+                Click on the Console tab:
+                <img src="images/browser_console.png" alt="A screenshot showing the Console tab in browser dev tools">
+            </li>
+            <li>
+                You should see your JavaScript output logged in the console!
+            </li>
+        </ol>
+        <br>
+        <img src="images/javascript_tip.png" alt="A Reddit post that says: 'The absolute best way to learn JavaScript is by building things in JavaScript and learning as you go. You run into a wall you Google it and you get past the problem'">
+        <p>
+            <b>Exercise</b>: log stuff in the console
+        </p>
+        <ul>
+            <li>log your name</li>
+            <li>
+                log the numbers 1 through 20 without typing each number individually <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration" class="comment">(hint)</a>
+            </li>
+            <li>
+                log “beep” if the current time is more than 30 minutes after the hour and log “boop” if the current time is less than or equal to 30 minutes after the hour <a href="https://www.w3schools.com/js/js_date_methods.asp" class="comment">(hint)</a>
+            </li>
+        </ul>
+        <p>
+            Once you have attempted the exercises on your own, see <a href="javascript_solutions.txt">sample solutions here</a>.
+        </p>
     </div>
     <div class="content">
         <h1>Basics of JavaScript</h1>
         <p>
-            
+            TODO: define JS/objects/etc.
         </p>
     </div>
     <div class="content">
         <h1>Document Object Model (DOM)</h1>
-        
+        <p>
+            TODO: define DOM
+        </p>
+        <p>
+            You can use JavaScript code to edit or add functionality to elements on your HTML page using <code>object.method()</code> and <code>object.property</code> syntax. It's probably best to just start by looking at some examples:
+        </p>
+        <ol>
+            <li>
+                Selecting HTML elements:
+                <div class="codeblock">
+                    <span class="comment">// get a single element from its id (this is why ids must be unique!)</span><br>
+                    document.getElementById(“myID”);<br>
+                    <br>
+                    <span class="comment">// get an array of all the elements in a given class</span><br>
+                    document.getElementsByClassName(“myClass”);<br>
+                    <div class="cfu">
+                        Check for understanding: what is different about the names of these two methods?
+                    </div>
+                </div>
+            </li>
+            <li>
+                Reading HTML text:
+                <div class="codeblock">
+                    <span class="comment">// get the HTML element that holds your page greeting</span><br>
+                    let greeting = document.getElementById(“greeting”);<br>
+                    <br>
+                    <span class="comment">// console.log(greeting) shows the many properties of this element</span>
+                    console.log(greeting);	
+                    <div class="cfu">
+                        Check for understanding: when/why do we write "greeting" in quotation marks vs just greeting as just a word?
+                    </div>
+                </div>
+            </li>
+            <li>
+                Changing HTML elements:
+                <div class="codeblock">
+                    <span class="comment">// update the innerText of your greeting to be “howdy universe”</span><br>
+                    greeting.innerText = “howdy universe”;<br>
+                    <br>
+                    <span class="comment">// make all elements with class “greenText” have green text</span><br>
+                    let greenElements = document.getElementsByClassName(“greenText”);<br>
+                    for (let i = 0; i &lt; greenElements.length; i++) {<br>
+                    &nbsp; greenElements[i].style.color = “green”;<br>
+                    }
+                    <div class="cfu">
+                        Check for understanding: why do we need a for() loop to change greenElements but not greeting?
+                    </div>
+                </div>
+            </li>
+            <li>
+                Write a function that makes desired changes when an HTML element is clicked:
+                <div class="codeblock">
+                    <span class="comment">//  turn all “li” elements red when the function turnRed() is called</span><br>
+                    function turnRed() {<br>
+                    let listItems = document.getElementsByTagName("li");<br>
+                    &nbsp; for (let i = 0; i &lt; listItems.length; i++) {<br>
+                    &nbsp; &nbsp; listItems[i].style.color = "red";<br>
+                    &nbsp; }<br>
+                    }
+                </div>
+                Call your custom <code>turnRed()</code> function in your .html file:
+                <div class="codeblock">
+                    <span class="comment">&lt;!-- call the function inside the tag of the HTML element using onclick="functionName()" --></span><br>
+                    &lt;button onclick="turnRed()">click me!&lt;/button>
+                    <div class="cfu">
+                        Check for understanding: what language is this^?
+                    </div>
+                </div>
+            </li>
+        </ol>
+        <p>
+            <b>Exercise</b>: add a button to your webpage that changes a property of HTML element(s). For example, you could try to create:
+        </p>
+        <ul>
+            <li>a button that replaces some text with a different string of text</li>
+            <li>two buttons: one that turns some text red and another that turns some text green</li>
+            <li>a button that toggles some piece of text between red and green (or any two colors)</li>
+            <li>a button that does anything you want it to do! the internet is your oyster ☺︎</li>
+        </ul>
     </div>
     <script src="script.js"></script>
 </body>

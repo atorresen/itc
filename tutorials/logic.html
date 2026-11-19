@@ -53,7 +53,7 @@
     <div class="content">
         <h1>Logical operators</h1>
         <p>
-            TODO
+            Boolean logic is built using three basic operations that combine and act on booleans: <b>and</b>, <b>or</b>, and <b>not</b>.
         </p>
         <h2>and (<span class="code">&&</span>)</h2>
         <div class="codeblock">
@@ -88,11 +88,23 @@
                 // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
             </span>
         </div>
+        <p>
+            These operators don't only work on literal <code>true</code> and <code>false</code> symbols. You can substitue in any expressions that evaluate to <code>true</code> or <code>false</code>, and you can combine multiple operators:
+        </p>
+        <div class="codeblock">
+            (12 > 10) && (3 > 5) &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'false')">?</span>
+            </span><br>
+            <br>
+            ("x" == "x") && !(0 > 1) &nbsp; <span class="comment">
+                // evaluates to <span class="answer" onclick="show(this, 'true')">?</span>
+            </span>
+        </div>
     </div>
     <div class="content">
         <h1>Conditional Statements</h1>
         <p>
-            TODO
+            Conditional statements check if a given condition is <code>true</code> or <code>false</code> to determine what code to execute. Conditional statements start with <b>if</b> and may also include fallback cases using <b>else</b>.
         </p>
         <h2>if</h2>
         <div class="codeblock">
@@ -162,7 +174,7 @@
     </div>
     <div class="content">
         <h1>Practice</h1>
-        <p>Create five p5.js sketches that have the following behaviors:</p>
+        <p>Create p5.js sketches that have the following behaviors:</p>
         <ol>
             <li>
                 displays a rectangle only when the mouse is being held down 
