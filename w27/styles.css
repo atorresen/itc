@@ -15,6 +15,7 @@ body {
     font-size: 1rem;
     max-width: 900px;
     margin: 10px auto;
+    padding: 20px;
 }
 
 section {
@@ -25,7 +26,11 @@ a {
     color: var(--link);
 }
 
-b, th {
+a:hover {
+    opacity: 0.75;
+}
+
+b, p, th {
     color: var(--heading);
 }
 
@@ -37,7 +42,6 @@ h3 {
     background-color: var(--dark);
     color: var(--heading);
     margin: -20px;
-    margin-bottom: 20px;
     padding: 20px;
 }
 
@@ -55,7 +59,7 @@ hr {
 button {
     border: 2px solid var(--dark);
     border-radius: 5px;
-    background-color: var(--accent);
+    background-color: var(--link);
     color: var(--text);
     cursor: pointer;
     font-family: monospace;
@@ -64,7 +68,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--link);
+    opacity: 0.75;
 }
 
 .week {
@@ -77,8 +81,18 @@ button:hover {
     padding: 20px;
 }
 
+.week h3:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
 .week hr {
     margin: 40px -20px;
+}
+
+.agenda {
+    display: none;
+    padding-top: 20px;
 }
 
 table {
@@ -98,4 +112,8 @@ td {
     border: 2px solid var(--accent);
     border-radius: 5px;
     padding: 2px;
+}
+
+.textDiv {
+    display: none;
 }
