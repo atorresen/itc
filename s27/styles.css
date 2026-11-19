@@ -12,6 +12,10 @@ body * {
     border-radius: 2px;
 }
 
+#content, .buttons {
+    background-color: #111111dd;
+}
+
 h1 {
     color: limegreen;
 }
@@ -111,6 +115,7 @@ button:hover {
     background-color: #333;
     display: none;
     margin-top: 0;
+    opacity: 0.65;
 }
 
 img {
