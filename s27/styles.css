@@ -1,0 +1,120 @@
+body {
+    background-color: #111;
+    color: antiquewhite;
+    font-family: monospace;
+    font-size: 1rem;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 95%
+}
+
+body * {
+    border-radius: 2px;
+}
+
+h1 {
+    color: limegreen;
+}
+
+h2 {
+    color : green;
+}
+
+h3 {
+    color: limegreen;
+}
+
+h4 {
+    margin-left: 4px;
+    margin-bottom: 0;
+}
+
+em {
+    color: honeydew;
+    font-style: normal;
+    font-weight: bold;
+}
+
+a {
+    color: limegreen;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.info-li {
+    margin-bottom: 8px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+    height: 10px;
+    margin: 24px auto;
+}
+
+table, tr, td {
+    border: 2px solid #bbb;
+    border-collapse: collapse;
+
+}
+
+td, th {
+    padding: 4px;
+}
+
+th {
+    height: 90px;
+}
+
+.percent {
+    color: #666;
+    font-weight: normal;
+}
+
+div {
+    padding: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+button {
+    background-color: limegreen;
+    border: #222;
+    min-width: 50px;
+    min-height: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: green;
+}
+
+.heading {
+    cursor: pointer;
+    margin: 0 auto;
+    padding: 8px;
+    background-color: #444;
+}
+
+.heading:hover {
+    background-color: #333;
+}
+
+.data {
+    background-color: #333;
+    display: none;
+    margin-top: 0;
+}
+
+img {
+    float: right;
+    opacity: 0.2;
+    max-width: 200px;
+}

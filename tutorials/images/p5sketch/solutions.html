@@ -1,0 +1,111 @@
+<!-- sketch_1 -->
+function setup() {
+  createCanvas(480, 270);
+  stroke("red"); 
+  fill("gray");
+}
+
+function draw() {
+  background(250);
+  rect(50,50,75,100);
+}
+
+
+<!-- sketch_2 -->
+function setup() {
+  createCanvas(270, 270);
+  noFill();
+  stroke(0);
+}
+
+function draw() {
+  background("green");
+  ellipse(160,160,100,100);
+}
+
+
+<!-- sketch_3 -->
+function setup() {
+  createCanvas(200, 300);
+  noStroke();
+}
+
+function draw() {
+  background(200,150,120);
+  
+  // Bright red
+  fill(255,0,0);
+  ellipse(20,20,16,16);
+
+  // Dark red
+  fill(127,0,0);
+  ellipse(40,20,16,16);
+
+  // Pink (pale red)
+  fill(255,200,200);
+  ellipse(60,20,16,16);
+}
+
+
+<!-- sketch_4 -->
+function setup() {
+  createCanvas(480, 270);
+  noStroke();
+}
+
+function draw() {
+  
+  background(0);
+
+  // No fourth argument means 100% opacity.
+  fill(0, 0, 255);
+  rect(0, 0, 240, 200);
+
+  // 255 means 100% opacity.
+  fill(255, 0, 0, 255);
+  rect(0, 0, 480, 40);
+
+  // 75% opacity.
+  fill(255, 0, 0, 191);
+  rect(0, 50, 480, 40);
+
+  // 55% opacity.
+  fill(255, 0, 0, 127);
+  rect(0, 100, 480, 40);
+
+  // 25% opacity.
+  fill(255, 0, 0, 63);
+  rect(0, 150, 480, 40);
+}
+
+
+<!-- sketch_5 -->
+function setup() {
+  createCanvas(480, 270);
+  ellipseMode(CENTER);
+  rectMode(CENTER); 
+}
+
+function draw() {
+  
+  background("pink");
+
+  // Body
+  stroke(0);
+  fill(150);
+  rect(240, 145, 20, 100);
+
+  // Head
+  fill(255);
+  ellipse(240, 115, 60, 60); 
+
+  // Eyes
+  fill(0); 
+  ellipse(221, 115, 16, 32); 
+  ellipse(259, 115, 16, 32);
+
+  // Legs
+  stroke(0);
+  line(230, 195, 220, 205);
+  line(250, 195, 260, 205); 
+}

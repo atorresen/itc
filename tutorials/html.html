@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" href="../images/icon.ico">
+    <link rel="stylesheet" href="tutorials.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Getting started with HTML</h1>
+        <ol>
+            <li>
+                Download and install <a href="https://code.visualstudio.com/ ">Visual Studio Code</a> (VS Code).
+            </li>
+            <li>
+                Create a new folder on your desktop.
+            </li>
+            <li>
+                Open the folder in VS Code.
+            </li>
+            <li>
+                In VS Code, create a new file named <code>index.html</code>.
+            </li>
+            <li>
+                In the <code>index.html</code> file, type <code>html:5</code> and hit Enter (or just copy/paste in the following boilerplate code):
+                <div class="codeblock">
+                    &lt;!DOCTYPE html><br>
+                    &lt;html lang="en"><br>
+                    &lt;head><br>
+                    &nbsp &nbsp &lt;meta charset="UTF-8"><br>
+                    &nbsp &nbsp &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"><br>
+                    &nbsp &nbsp &lt;title>Document</title><br>
+                    &lt;/head><br>
+                    &lt;body><br>
+                    <br>    
+                    &lt;/body><br>
+                    &lt;/html>
+                </div>
+            </li>
+            <li>
+                Type <code>hello world!</code> in the body of the file (between <code>&lt;body></code> and <code>&lt;/body></code>).
+            </li>
+            <li>
+                Save the file.
+            </li>
+            <li>
+                From the folder on your desktop, double click the <code>index.html</code> file. It should open in a web browser.
+            </li>
+            <li>
+                See your webpage!
+            </li>
+            <li>
+                Return to VS Code. Update <code>hello world</code> to some other text. Save the file. Refresh the webpage and see your update.
+            </li>
+        </ol>
+    </div>
+    <div class="content">
+        <h1>Basics of HTML</h1>
+        <p>
+            HTML stands for <b>HyperText Markup Language</b>. HTML defines the content and structure of a webpage.
+        </p>
+        <p>
+            You can use the <b>Inspect</b> feature in Firefox or Google Chrome to see the HTML that defines this webpage.
+        </p>
+        <!-- Are you inspecting this page right now?! Nice. (TODO - make this cuter) -->
+        <br>
+        <p>
+            HTML is structured using <b>elements</b>. HTML elements are defined by <b>tags</b> that look like this:
+            <div class="codeblock">
+                &lt;tag> content goes here &lt;/tag>
+            </div>
+        </p>
+        <p>
+            There are many different tags that define different types of content. For example:
+        </p>
+        <ul>
+            <li>all content of an HTML page goes within the <code>&lt;body></code> tag</li>
+            <li>levels of headings are defined with <code>&lt;h1></code>, <code>&lt;h2></code>, …, <code>&lt;h6></code> tags</li>
+            <li><code>&lt;p></code> defines a paragraph of text</li>
+            <li><code>&lt;ul></code> defines a bulleted list, <code>&lt;li></code> defines each list item inside</li>
+            <li><code>&lt;a></code> defines a hyperlink to another webpage</li>
+        </ul>
+        <p>
+            There are <a href="https://iamwillwang.com/every-html-element">many more ☺</a>
+        </p>
+        <br>
+        <br>
+        <p>Here are some examples of simple HTML webpages: 
+            <ul>
+                <li>
+                    The first ever page on the world wide web: <a href="https://info.cern.ch/">https://info.cern.ch/</a>
+                </li>
+                <li>
+                    The website of a super rich company: <a href="https://www.berkshirehathaway.com/ ">https://www.berkshirehathaway.com/ </a>
+                </li>
+                <li>
+                    The website of a well-known computer artist: <a href="https://www.emohr.com/ ">https://www.emohr.com/</a>
+                </li>
+                <li>
+                    Lol: <a href="https://motherfuckingwebsite.com/ ">https://motherfuckingwebsite.com/ </a>
+                </li>
+            </ul>
+
+        </p>
+    </div>
+    <div class="content">
+        <h1>Practice</h1>
+        <p>
+            Add content and structure to your <code>index.html</code> webpage.
+        </p>
+        <ul>
+            <li>
+                Search online to discover tags you can use. W3Schools has <a href="https://www.w3schools.com/html/html_basic.asp">HTML Basic Examples</a> that might be a good starting point.
+            </li>
+            <li>
+                And you can always ask a classmate -- there is lots of brainpower in this classroom!
+            </li>
+            <li>
+                You can also ask AnneMarie -- there is less brainpower in her, but it is sometimes still worth a try. Plus it's her job.
+            </li>
+        </ul>
+        <p>
+            For now, just add content. We will talk about style when we learn about CSS.
+        </p>
+    </div>
+    <div class="content">
+        <h1>Code Hygeine</h1>
+        <ul>
+            <li>
+                To add a <b>code comment</b> that will appear in your .html file but not on your webpage, surround text with <code>&lt;!--</code> and <code>--></code>
+                <div class="codeblock comment">
+                    &lt;!-- this is a comment --><br>
+                    &lt;!-- use comments to keep track of what your code is doing -->
+                </div>
+                <ul>
+                    <li>
+                        Each coding language has its own syntax for indicating a comment. In VS Code, you can comment out a line of code using the <b>Cmd+/</b> or <b>Ctrl+/</b> keyboard shortcut.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Even though it won't affect how your webpage renders, it is best practice to use <b>consistent whitespace</b> (spaces, tabs, and line breaks) throughout your code files. For example, keep the opening and closing tags of an element at the same indentation level and indent tags nested inside others:
+                <div class="codeblock">
+                    &lt;table><br>
+                        &nbsp; &nbsp; &lt;tr>&nbsp; <span class="comment">&lt;!-- 1 tab in --></span><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &lt;td>&nbsp;<span class="comment">&lt;!-- 2 tabs in --></span> &lt;/td><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &lt;td>&nbsp;<span class="comment">&lt;!-- 2 tabs in --></span> &lt;/td><br>
+                        &nbsp; &nbsp; &lt;/tr><br>
+                        &nbsp; &nbsp; &lt;tr>&nbsp; <span class="comment">&lt;!-- 1 tab in --></span><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &lt;td>&nbsp;<span class="comment">&lt;!-- 2 tabs in --></span> &lt;/td><br>
+                            &nbsp; &nbsp; &nbsp; &nbsp; &lt;td>&nbsp;<span class="comment">&lt;!-- 2 tabs in --></span> &lt;/td><br>
+                        &nbsp; &nbsp; &lt;/tr><br>
+                    &lt;/table>
+                </div>
+            </li>
+            <li>
+                Cleanly formatted code with plenty of comments is easier to read -- you will thank yourself in the long run.
+            </li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

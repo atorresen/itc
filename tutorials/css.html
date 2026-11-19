@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" href="../images/icon.ico">
+    <link rel="stylesheet" href="tutorials.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Adding CSS to HTML</h1>
+        <p>
+            It is best practice to create a separate document for your CSS code. Here is how to get started:
+        </p>
+        <ol>
+            <li>
+                Create a new file in the folder where your <code>index.html</code> file lives.
+            </li>
+            <li>
+                Name the new file <code>styles.css</code>.
+            </li>
+            <li>
+                In the <code>&lt;head></code> of your <code>index.html</code> file, include the following, then save the file:
+                <div class="codeblock">
+                    &lt;head><br>
+                    &nbsp &nbsp …<br>
+                    &nbsp &nbsp &lt;link rel="stylesheet" href="styles.css"><br>
+                    &lt;/head>
+                </div>
+            </li>
+            <li>
+                Add the following code to your <code>styles.css</code> file, then save the file:
+                <div class="codeblock">
+                    body {<br>
+                    &nbsp background: yellow;<br>
+                    }
+                </div>
+            </li>
+            <li>
+                When you open the <code>index.html</code> file, it should have a yellow background!
+            </li>
+        </ol>
+    </div>
+    <div class="content">
+        <h1>Basics of CSS</h1>
+        <p>
+            CSS stands for <b>Cascading Style Sheets</b>. CSS defines the styling for webpages written in HTML.
+        </p>
+        <p>
+            You can add CSS styles to HTML elements according to their <b>tag</b>, or to a selection of HTML elements by defining a <b>class</b>.
+        </p>
+        <h2>tag</h2>
+        <p>
+            To define a CSS style for all elements of a certain tag type, write the tag name (in CSS syntax, this is called the <b>selector</b>), then, inside curly brackets, the CSS styles separated by semi-colons, as follows:
+            <div class="codeblock">
+                <span class="comment">/* comments in CSS look like this */</span><br>
+                <span class="comment">/* the following CSS makes all h1 elements purple with a monospace font */</span><br>
+                h1 {<br> 
+                &nbsp color: purple;<br>
+                &nbsp font-family: monospace;<br>
+                }
+            </div>
+        </p>
+        <h2>class</h2>
+        <p>
+            To define a style for a more specific selection of HTML elements, you can define a <b>class</b>. This requires adding code to both your <code>.html</code> and <code>.css</code> files.
+        </p>
+        <p>
+            In your <code>.html</code> file, add a class to the desired element(s) by adding a <code>class=""</code> attribute <em>inside</em> of their opening tag(s):
+            <div class="codeblock">
+                &lt;h1 class="className">I want this heading to be underlined.&lt;/h1><br>
+                &lt;h2 class="className">I also want this heading to be underlined.&lt;/h2><br>
+            </div>
+        </p>
+        <p>
+            The className can be any string. I recommend picking a name that describes the function of the class (so for this example, class="underline" might be a better choice).
+        </p>
+        <p>
+            In your <code>.css</code> file, add a style for the class by typing <b>a period and then the class name</b> as a selector, as follows:
+            <div class="codeblock">
+                <span class="comment">/* the following CSS underlines text in all HTML elements with class="className" */</span><br>
+                .className {<br>
+                &nbsp; &nbsp; text-decoration: underline;<br>
+                }
+            </div>
+        </p>
+    </div>
+    <div class="content">
+            <h1>&lt;span> and &lt;div></h1>
+        <p>
+            For more fine-tuned application of CSS styles, you can use the "invisible" <code>&lt;span></code> and <code>&lt;div></code> elements. These elements don't make any changes on their own, but you can use them as containers for adding classes.
+        </p>
+        <h2>&lt;span></h2>
+        <p>
+            For example, if you want only a small section of text to be green, you can use <code>&lt;span></code> to add a class without changing any of the surrounding formatting:
+            <div class="codeblock">
+                &lt;p><br> 
+                &nbsp; &nbsp;I only want <code>&lt;span class="greenText">these three words</code>&lt;/span> to be green.<br>
+                &lt;/p>
+            </div>
+        </p>
+        <p> 
+            The accompanying CSS could be:
+            <div class="codeblock">
+                .greenText {<br>
+                &nbsp; &nbsp; color: green;<br>
+                }
+            </div>
+            and the result would look like this:
+            <style>
+                /* Note: I'm using the <style> tag for this example, but best practice would be to put the CSS in its own .css stylesheet file */
+                .greenText {
+                    color: green;
+                }
+            </style>
+            <p>I only want <span class="greenText">these three words</span> to be green.</p>
+        </p>
+        <h2>&lt;div></h2>
+        <p>
+            If you want to apply a style to a larger section of HTML, <code>&lt;div></code> is very useful. For example, you might want to combine multiple elements in a <code>&lt;div></code> and give the entire <code>&lt;div></code> a pink background:
+            <div class="codeblock">
+                &lt;div class="pinkBackground"><br>
+                &nbsp; &nbsp; &lt;h3>I want these headings...&lt;/h3><br>
+                &nbsp; &nbsp; &lt;h4>...in a single pink block.&lt;/h4><br>
+                &lt;/div>
+            </div>
+        </p>
+        <p>
+            The accompanying CSS could be:
+            <div class="codeblock">
+                .pinkBackground {<br>
+                &nbsp; &nbsp; background: pink;<br>
+                }
+            </div>
+            and the result would look like this:
+            <style>
+                /* Note: I'm using the <style> tag for this example, but best practice would be to put the CSS in its own .css stylesheet file */
+                .pinkBackground {
+                    background: pink;
+                }
+            </style>
+            <div class="pinkBackground">
+                <h3>I want these headings...</h3>
+                <h4>...in a single pink block.</h4>
+            </div>
+        </p>
+        <p>
+            You can add multiple classes to an HTML element by writing the class names separated by spaces:
+            <div class="codeblock">
+                &lt;div class="greenText pinkBackground"><br>
+                &nbsp; &nbsp; &lt;h3>I want these headings to be green...&lt;/h3><br>
+                &nbsp; &nbsp; &lt;h4>...and to be in a single pink block.&lt;/h4><br>
+                &lt;/div>
+            </div>
+            <div class="greenText pinkBackground">
+                <h3>I want these headings to be green...</h3>
+                <h4>...and to be in a single pink block.</h4>
+            </div>
+        </p>
+    </div>
+    <div class="content">
+        <h1>Practice</h1>
+        <p>
+            Add style to your <code>index.html</code> webpage by adding to your <code>styles.css</code> file.
+        </p>
+        <p>
+            Search online to discover styles you can use. Here are some general documentation resources:
+        </p>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content">MDN webdocs</a></li>
+            <li><a href="https://www.w3schools.com/css/default.asp">W3Schools</a></li>
+            <li><a href="https://learnxinyminutes.com/css/">Learn X in Y Minutes</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>More CSS topics</h1>
+        <h2>color</h2>
+        <p>
+             You can define color using 
+             <a href="https://www.w3schools.com/colors/colors_hexadecimal.asp">HEX codes</a>, 
+             <a href="https://www.w3schools.com/css/css_colors_rgb.asp">RGB numbers</a>, or <a href="https://www.w3schools.com/colors/colors_names.asp">HTML color names</a>.
+        </p>
+        <h2>font</h2>
+        <p>
+            There are a few <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-family">built-in font styles</a> that you can access via the font-family property (the browser contains defaults for these styles, so they will load quickly).
+        </p>
+        <p>
+            You also can use the name of a font installed on your computer, or you can add a link to <a href="https://www.w3schools.com/css/css_font_google.asp">Google fonts</a> (or other online font databases) to get custom fonts.
+        </p>
+        <p>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font ">Here is documentation</a> for all of the CSS font properties.
+        </p>
+        <h2>spacing</h2>
+        <p>
+            Create spacing around HTML elements using <a href="https://www.geeksforgeeks.org/css/css-padding-vs-margin/"><b>margin</b> or <b>padding</b></a>: margin adds space around the outside of the border of an HTML element, and padding adds space around the content of an HTML element (still within the border).
+        </p>
+        <p>
+            The relationship between margin, padding, content, and borders is called the "CSS box model" -- <a href="https://www.geeksforgeeks.org/css/css-box-model/">here is more documentation</a>.
+        </p>
+        <h2>positioning</h2>
+        <div class="flexImg">
+            <p>
+                The <a href="https://www.w3schools.com/css/css_grid.asp"><b>grid</b></a> and <a href="https://www.w3schools.com/Css/css3_flexbox.asp"><b>flex</b></a> CSS <b>display</b> style options offer ways of arranging your content in adjustable rows and columns.
+                <br>
+                <br>
+                Arranging elements beyond rows and columns can sometimes be tricky. <a href="https://www.peterlunch.com/blog/understanding-the-css-position-property">Here</a> is a thorough guide to the <b>position</b> style and the different ways you can instruct HTML elements to interact with each other (are they inline with each other? are they centered relative to the page or to each other? do they overlap each other? do they move as you scroll? etc. etc. etc.)
+            </p>
+            <img src="images/gru_css_meme.png" alt="Meme of Gru from Despicable Me learning to make a website, add HTML, add CSS, and then see the positioning get all messed up" class="medium">
+        </div>
+        <h2>variables</h2>
+        <p>
+            To avoid duplicating code (and so, e.g., you can update a color in just one place instead of re-type every instance in your file), you can use <a href="https://dev.to/aivo/root-variables-in-css-use-it-3ik5 ">root variables</a>.
+        </p>
+        <h2>inheritance</h2>
+        <p>
+            The "cascading" part of "Cascading Style Sheets" refers to the way that styles are inherited between selectors. Read more <a href="http://web.simmons.edu/~grabiner/comm244/weekfour/css-concepts.html">here</a> if you're interested in really optimizing your CSS code.
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

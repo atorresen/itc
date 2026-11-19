@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to Computation</title>
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="styles.css" id="csslink">
+</head>
+<body>
+    <div class="buttons">
+        <button onclick="htmlToggle()" id="html">HTML</button>
+        <button onclick="cssToggle()" id="css">CSS</button>
+        <button onclick="jsToggle()" id="js">JS</button>
+        <a href="https://github.com/atorresen/itc">code</a>
+    </div>
+
+    <div id="content">
+        <img src="images/risd_ascii_binary.png" alt="The binary representations of the ASCII encodings for the letters RISD">
+        <h1>Intro to Computation</h1>
+        <h2>Spring 2027</h2>
+        <h4>Rhode Island School of Design</h4>
+        <h4>Thursdays ▪ 8am-1pm ▪ CIT 305</h4>
+        <hr>
+        <h2>requirements</h2>
+        <ul>
+            <li class="info-li">view course materials and submit projects on <a href="https://www.are.na/annemarie-torresen-agoteiut4fk/intro-to-computation-spring-2027">Are.na</a></li>
+                <li class="info-li">bring a laptop and earbuds/headphones to class every day</li>
+                <li class="info-li">communicate proactively (email AnneMarie at <a href="mailto:atorre04@risd.edu">atorre04@risd.edu</a>)</li>
+        </ul>
+        <table>
+            <tr>
+                <th rowspan="2">process <span class="percent">50%</span></th>
+                <td>participation <span class="percent">25%</span></td>
+                <td colspan="2">discussions, exercises, critique, collaboration</td>
+            </tr>
+            <tr>
+                <td>research <span class="percent">25%</span></td>
+                <td colspan="2">document on Are.na</td>
+            </tr>
+            <tr>
+                <th rowspan="5">product <span class="percent">50%</span></th>
+                <td rowspan="4">intermediate projects <span class="percent">30%</span></td>
+                        <tr>
+                            <td>web art  <span class="percent">10%</span></td>
+                            <td>due week 3</td>
+                        </tr>
+                        <tr>
+                            <td>generative art  <span class="percent">10%</span></td>
+                            <td>due week 6</td>
+                        </tr>
+                        <tr>
+                            <td>software art  <span class="percent">10%</span></td>
+                            <td>due week 9</td>
+                        </tr>
+            </tr>
+            <tr>
+                <td>final project  <span class="percent">20%</span></td>
+                <td>+ artist statement</td>
+                <td>due week 12</td>
+            </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li class="percent">see the <a href="https://docs.google.com/document/d/1bLog1A1ckg3veWU9WYo_Q0XNLGHA5UVUYmQFo9kGhTg/edit?usp=drive_link">syllabus</a> for more details</li>
+        </ul>
+        <hr>
+        <h2>schedule</h2>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-1')">week 1</h3>
+            <div class="data" id="week-1">
+                <ul>
+                    <li>introductions</li>
+                    <li>course overview</li>
+                    <li><a href="../tutorials/html.html">intro to HTML</a></li>
+                    <li><a href="../tutorials/css.html">intro to CSS</a></li>
+                    <li>web art gallery (<a href="">Are.na</a>)</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>read <a href="https://luckysoap.com/statements/handmadeweb.html">A Handmade Web</a> by J.R. Carpenter</li>
+                    <li>web art project due week 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-2')">week 2</h3>
+            <div class="data" id="week-2">
+                <ul>
+                    <li>discuss: <em>A Handmade Web</em></li>
+                    <li>HTML/CSS</li>
+                    <li><a href="../tutorials/github.html">GitHub</a></li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>web art project due next week</li>
+                </ul>
+            </div>
+        </div>
+        <div class="webgen">
+            <h3 class="heading" onclick="collapse('week-3')">week 3</h3>
+            <div class="data" id="week-3">
+                <ul>
+                    <li>critique: web art</li>
+                    <li>conditional design activity</li>
+                    <li><a href="../tutorials/p5.js.html">intro to p5.js</a></li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>read <a href="https://www.are.na/block/49651884">Form+Code: <em>What is Code? (p11-25)</em></a> by Casey Reas and Chandler McWilliams</li>
+                    <li>Coding Train video tutorials</li>
+                    <li>generative art project due week 6</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-4')">week 4</h3>
+            <div class="data" id="week-4">
+                <ul>
+                    <li>discuss: <em>What is Code?</em></li>
+                    <li><a href="https://www.are.na/block/51163347">10 Questions Concerning Generative Computer Art</a></li>
+                    <li>generative art in p5.js</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>read <a href="https://www.jstor.org/stable/1573236">Toward Aesthetic Guidelines for Paintings with the Aid of a Computer</a> by Vera Molnar</li>
+                    <li>Coding Train video tutorials</li>
+                    <li>generative art project due week 6</li>
+                </ul>
+            </div>
+        </div>
+        <div class="gen">
+            <h3 class="heading" onclick="collapse('week-5')">week 5</h3>
+            <div class="data" id="week-5">
+                <ul>
+                    <li>discuss: Vera Molnar</li>
+                    <li>advanced coding structures in p5.js</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>Coding Train video tutorials</li>
+                    <li>generative art project due next week/li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-6')">week 6</h3>
+            <div class="data" id="week-6">
+                <ul>
+                    <li>critique: generative art</li>
+                    <li><a href="../tutorials/javascript.html">JavaScript/DOM</a></li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>read <a href="https://www.are.na/block/51163350">Code as performative speech act</a> by Inke Arns</li>
+                    <li>software art project due week 9</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-7')">week 7</h3>
+            <div class="data" id="week-7">
+                <ul>
+                    <li>discuss: <em>Code as performatieve speech act</em></li>
+                    <li>APIs</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>software art project due week 9</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-8')">week 8</h3>
+            <div class="data" id="week-8">
+                <ul>
+                    <li>software topics TBD based on student interest</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>software art project due next week</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-9')">week 9</h3>
+            <div class="data" id="week-9">
+                <ul>
+                    <li>critique: software art</li>
+                    <li>final project research</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>final project proposal due next week</li>
+                    <li>final project (full draft) due week 11</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-10')">week 10</h3>
+            <div class="data" id="week-10">
+                <ul>
+                    <li>final project studio time</li>
+                    <li>one-on-one meetings</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>final project (full draft) due next week</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-11')">week 11</h3>
+            <div class="data" id="week-11">
+                <ul>
+                    <li>critique: final project</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>final documentation and artist statement due next week</li>
+                </ul>
+            </div>
+        </div>
+        <div class="week">
+            <h3 class="heading" onclick="collapse('week-12')">week 12</h3>
+            <div class="data" id="week-12">
+                <ul>
+                    <li>final project presentations</li>
+                </ul>
+                <h4>homework:</h4>
+                <ul>
+                    <li>see you on Are.na!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="text"></div>
+    <script src="script.js"></script>
+</body>
+</html>

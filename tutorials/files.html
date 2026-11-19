@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="files">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Organization</title>
+    <link rel="icon" href="../images/icon.ico">
+    <link rel="stylesheet" href="tutorials.css">
+</head>
+<body>
+    <div class="content">
+        <h1>File Names</h1>
+        <p>
+            File names should include <b>no whitespace</b>. Use only letters and numbers. You can replace spaces with an underscore ( _ ) or you can use camelCaseToIndicateWhereNewWordsStart.
+        </p>
+        <p>
+            Give your files <b>descriptive names</b>*.
+            <br><br>
+            For example, instead of "Untitled.jpg" or "Screenshot 2027-11-11 at 11.11.11 AM.png", use "happyCow.jpg" or "happy_cow_1.png"
+        </p>
+        <img src="images/happy_cow_1.png" alt="Photo of a cow smiling at the camera" class="small">
+        <img src="images/happy_cow_2.png" alt="Photo of a cow smiling at the camera" class="small">
+        <h2>"index.html"</h2>
+        <p>
+            *While you should give most files descriptive names, the landing page for your website should always be named <code>index.html</code>. This is important in our class because we are <a href="github.html">publishing webpages via GitHub</a>, which automatically looks for an "index.html" file as the default landing page.
+        </p>
+    </div>
+    <div class="content">
+        <h1>File Extensions</h1>
+        <p>
+            The three or four letters that follow the file name are called the <b>file extension</b>. The file extension tells the computer how to interpret the file.
+        </p>
+        <ul>
+            <li>
+                If you want a file to be an HTML webpage, it needs to end with the <code>.html</code> file extension.
+            </li>
+            <li>
+                If you want a file to be a CSS stylesheet, it needs to end with the <code>.css</code> file extension.
+            </li>
+            <li>
+                If you want a file to be JavaScript code, it needs to end with the <code>.js</code> file extension.
+            </li>
+        </ul>
+        <p>
+            Also pay attention to the file extensions used for image files. Generally, <code>.png</code>, <code>.jpg</code> (or <code>.jpeg</code>), and <code>.svg</code> files will appear in the browser without any issues.
+        </p>
+    </div>
+    <div class="content">
+        <h1>File Paths</h1>
+        <p>
+            In HTML, you must refer to a file by its <b>file path</b> relative to the location of the HTML page from which the file is referenced. A relative file path will look for files in the folder (or "directory") where it resides, so you must also save all required files (stylesheets, images, scripts, etc.) somewhere in that directory.
+        </p>
+        <p>
+           This video - <a href="https://www.youtube.com/watch?v=BMT3JUWmqYY">Understanding File Paths</a> - gives a more complete explanation of absolute and relative file paths.
+        </p>
+        <h2>Organizing Images</h2>
+        <p>
+            If you have multiple images, is best practice to create an "images" folder inside your website directory and store all images there.
+        </p>
+        <img src="images/images_folder.png" alt="A screenshot of a file explorer for an web project that contains an index.html page and an images folder containing two images" class="small">
+        <p>
+            Once you create an "images" folder, all of your image <code>src</code> attributes need to include the path through the folder and to the file. For example:
+            <div class="codeblock">
+                &lt;img src="images/happy_cow_1.png">
+            </div>
+        </p>
+        <p>
+            It is best practice to include "alt-text" for images, which will display in place of the image if the image fails to load, and also provides a description of the image for vision-impaired users. For example:
+            <div class="codeblock">
+                &lt;img src="images/happy_cow_1.png" alt="Photo of a cow smiling at the camera">
+            </div>
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="github">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <link rel="icon" href="../images/icon.ico">
+    <link rel="stylesheet" href="tutorials.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Connect a GitHub Account</h1>
+        <p>
+            Git is a tool for keeping track of versions of your code projects. GitHub is a platform that uses Git for publishing websites.
+        </p>
+        <p>
+            The following steps (1-3) lead you through installing Git on your computer, creating a GitHub account, and then linking your GitHub account to your computer. <em>You only need to do this once</em>; after you have successfully completed these steps, your computer should be set up for using Git and GitHub as much as you want.
+        </p>
+        <ol>
+            <li>Download and install the <a href="https://git-scm.com/downloads">latest version of Git</a></li>
+            <ul>
+                <li>On Mac: Git comes pre-installed on some Apple computers. To see if you already have it, open the <b>Terminal</b> app and type <code>git version</code>, then hit Enter. If a version number appears, you are ready to go. If an alert appears prompting you to install Command Line tools, click <b>Install</b></li>
+                <li>Here is <a href="https://github.com/git-guides/install-git">documentation</a> for installing Git on all operating systems</li>
+            </ul>
+            <li>Make a <a href="https://github.com/">GitHub account</a></li>
+            <li>Connect your laptop to you your GitHub account
+                <p><a href="https://docs.github.com/en/get-started/git-basics/set-up-git">Here</a> is the full documentation for this step. TLDR:</p>
+                <ol class="letterList">
+                    <li>
+                        Open the <a href="https://www.youtube.com/watch?v=ZkoEHvG3GI8">Terminal</a> app on Mac or <a href="https://www.youtube.com/watch?v=MBBWVgE0ewk">Command Prompt</a> on Windows.</li>
+                    <li>
+                        Feel like a super cool coder.
+                    </li>
+                    <li>
+                        Set your username (doesn't technically have to be the same as your GitHub username, but it makes sense to make them match) by running the following (code in purple should be replaced with your personalized info):
+                        <div class="codeblock">
+                            git config --global user.name "<span class="replace">yourUserName</span>"
+                        </div>
+                    </li>
+                    <li>
+                        Set your email address (this DOES have to be the <b>same email you used to sign up for your GitHub account</b>):
+                        <div class="codeblock">
+                            git config --global user.email "<span class="replace">yourEmail@email.com</span>"
+                        </div>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+    <div class="content">
+        <h1>Create a Repository</h1>
+        <p>
+            A repository is ... [TODO]
+        </p>
+        <ol>
+            <li>
+               <b>Create a new repository</b>
+                <p>
+                    Log in to <a href="http://github.com">github.com</a>. Click <b>Create repository</b> (sometimes this is hidden beyond a [+] button in top right corner).
+                    <br>
+                    <br>
+                    Choose a repository name.
+                    <br><br>
+                    Your name should have no spaces (for example "IntroToComputation" or "intro_to_computation" instead of "Intro To Computation")
+                    <br><br>
+                    Keep the repository Public.
+                    <br><br>
+                    Click <b>Create repository</b>.
+                </p>
+            </li>
+            <li>
+                <b>Upload files to the repository</b>
+                <div class="flexImg">
+                    <p>
+                        On your new repository page, click <b>uploading an existing file</b>.
+                        <br>
+                        <br>
+                        Drag your <code>index.html</code> and any linked files (e.g., <code>styles.css</code> or any images) into the repository. (Just upload the files, not the top-level folder that contains them).
+                        <br>
+                        <br>
+                        Write a commit message (e.g., "Add files via upload" or "Initial commit") and commit your changes.
+                    </p>
+                    <img src="images/github_upload.png" alt="A screenshot showing where to upload files to a GitHub repository" class="medium">
+                </div>
+            </li>
+            <li>
+                <b>Deploy your code to the web</b>
+                <div class="flexImg">
+                    <p>
+                        On the home page for the repository you just created, go to the <b>Settings</b> tab.
+                        <br>
+                        <br>
+                        On the left of the Settings page, choose <b>Pages</b>. Then, under <b>Branch</b>, select <b>main</b> and hit <b>Save</b>.
+                        <br>
+                        <br>
+                        Wait a minute or two for the servers to catch up. Then go to <code class="nobr">http://<span class="replace">username</span>.github.io/<span class="replace">repositoryName</span></code>
+                        (fill in your own GitHub username and the repositoryName you just chose) to see your live webpage!
+                    </p>
+                    <img src="images/github_pages.png" alt="Screenshot showing the Settings tab and the place on the Pages tab of Settings where you can select the branch to deploy" class="medium">
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="content">
+        <h1>Clone a Repository</h1>
+        <p>
+            The files in your GitHub repository are the files that contain the code that shows on the web. Therefore, those are the files you need to make changes in if you want to make changes to your website. [TODO...]
+        </p>
+        <ol start="0">
+            <li>
+                If this is your first time cloning a repository: create a new folder called <code>Git</code> in the home directory of your computer. This folder is where you will hold all of your Git-tracked code projects.
+                <ul>
+                    <li>
+                        TODO: directions to home directory
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Open the <a href="https://www.youtube.com/watch?v=ZkoEHvG3GI8">Terminal</a> app on Mac or <a href="https://www.youtube.com/watch?v=MBBWVgE0ewk">Command Prompt</a> on Windows.</li>
+            </li>
+            <li>
+                Use the command line to navigate into your <code>Git</code> directory by running
+                <div class="codeblock">
+                    cd Git
+                </div>
+            </li>
+            <li>
+                Copy the web URL of your GitHub repository, which you can find by clicking the green <b>&lt;> Code</b> button on the repository page in GitHub.
+                <br>
+                <img src="images/github_clone.png" alt="Screenshot showing the Code button and web URL on a GitHub repository homepage">
+            </li>
+            <li>
+                Run the following in the command line to make a clone of your repository on your computer.
+                <div>
+                    git clone <span class="replace">https://yourUrlHere</span>
+                </div>
+            </li>
+            <li>
+                Now you should see a new folder with your new repository inside of your Git folder. Open that folder in Visual Studio Code.
+                <br>
+                <br>
+                And you're read to keep coding!
+            </li>
+        </ol>
+        <p>
+            <b>Note:</b> Once you have cloned your repository, <b>delete the original files</b> that you uploaded to GitHub. From now on, <b>only work on the cloned version</b>, because those are the files that are tracked by Git and you will be able to publish to the web.
+        </p>
+    </div>
+    <div class="content">
+        <h1>Commit and Sync Changes</h1>
+        <p>
+            When you're satisfied with the edits you have made to your website, you can <b>Commit</b> your changes and then <b>Sync</b> them to GitHub and the web.
+        </p>
+        <p>
+            VS Code has tools for viewing, committing, and syncing changes to GitHub repositories (here is the <a href="https://code.visualstudio.com/docs/sourcecontrol/quickstart">full documentation</a>).
+        </p>
+        <ol>
+            <li>
+                <div class="flexImg">
+                    <p>
+                        Click the branching icon on the left-side toolbar to open up the Source Control view.
+                    </p>
+                    <img src="images/git_diff.png" alt="A screenshot of VS Code that shows the branching icon leading to Source Control view" class="medium">
+                </div>
+            </li>
+            <li>
+                Click on a file to open a side-by-side "Working Tree" (aka, "the diff") showing the changes you have made since the last commit.
+            </li>
+            <li>
+                If you are satisfied with the changes, click the "+" icon on that file to stage the changes.
+                <br>
+                <img src="images/git_add.png" alt="A screenshot of VS code showing how to use the + icon to stage changes">
+            </li>
+            <li>
+                When you have staged all desired changes, type a commit message in the Message bar and click <b>Commit</b>.
+                <ul>
+                    <li>TODO: explain what a commit message should be</li>
+                </ul>
+            </li>
+            <li>
+                To push your changes to your published web page, click the <b>Sync</b> button.
+                <ul>
+                    <li>
+                        The first time you do this, VS Code may open a browser window to connect with your GitHub account. Log on and allow GitHub to access your computer.
+                    </li>
+                </ul>
+            </li>
+        </ol>
+        <p>
+            Once you have synced, it may take a few minutes for your changes to show up, but eventually you should see them at the URL for your repository (<code class="nobr">http://<span class="replace">username</span>.github.io/<span class="replace">repositoryName</span></code>).
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
