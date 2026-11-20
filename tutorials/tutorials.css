@@ -47,8 +47,14 @@ a {
     color: var(--mainLink);
 }
 
-p {
+li, p {
     margin-top: 20px;
+    padding: 2px
+}
+
+li:hover, p:hover {
+    background: var(--mainBG);
+    border-radius: 8px;
 }
 
 .home {
@@ -147,10 +153,14 @@ img.medium {
     max-width: 300px;
 }
 
-img {
+img.standard {
     margin: 5px;
     max-width: 90%;
     max-height: 300px;
+}
+
+img.large {
+    height: 500px;
 }
 
 /* place image to the right of text in a column */

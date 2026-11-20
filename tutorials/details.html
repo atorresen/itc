@@ -11,20 +11,74 @@
     <div class="content">
         <h1>Title</h1>
         <p>
-            Update the <code>&lt;title>Your Title Goes Here&lt;/title></code> in the <code>&lt;head>&lt;/head></code> of your html document.
+            Update your webpage's <code>title</code> in the <code>&lt;head>&lt;/head></code> of your HTML document (VS Code sets the title to "Document" by default).
         </p>
+        <div class="codeblock">
+            &lt;head><br>
+            &nbsp; ...<br>
+            &nbsp; &lt;title>Your Title Goes Here&lt;/title><br>
+            &nbsp; ...<br>
+            &lt;/head>
+        </div>
     </div>
     <div class="content">
         <h1>Favicon</h1>
-        
+        <div class="flexImg">
+            <p>
+                A "favicon" is the small image that shows in the browser tab for a webpage.
+            </p>
+            <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Wikipedia_favicon_in_Firefox_on_KDE_%282023%29.png" alt="A screenshot of Wikipedia showing the favicon next to the address bar." class="medium">
+                <br>
+                <caption><a href="https://en.wikipedia.org/wiki/Favicon">Wikipedia</a></caption>
+            </figure>
+        </div>
+        <p>
+            To add a favicon to your webpage, choose an image and save it as an <code>.ico</code> file type. Add the image to your project folder. Then, add the following <code>link</code> to the <code>&lt;head>&lt;/head></code> of your HTML document, with the appropriate file path for your icon in the <code>href</code>:
+        </p>
+        <div class="codeblock">
+            &lt;head><br>
+            &nbsp; ...<br>
+            &nbsp; &lt;link rel="icon" href="images/icon.ico">&lt;/link><br>
+            &nbsp; ...<br>
+            &lt;/head>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Alt text</h1>
+        <p>
+            When you add an <code>img</code> to an HTML file, you should also write a brief description of the image for the <code>alt</code> text. This helps optimize your webpage for search engines (see SEO below), offers backup content in case images fail to load, and makes the webpage more accessible for vision-impaired users.
+        </p>
+        <div class="codeblock">
+            &lt;img src="images/happyCow.png" alt="A photo of a cow smiling at the camera">&lt;/img></code>
+        </div>
     </div>
     <div class="content">
         <h1>SEO</h1>
-        
-    </div>
-    <div class="content">
-        <h1>Code Hygeine</h1>
-        
+        <p>
+            SEO stands for <b>Search Engine Optimization</b>, and refers to ways of increasing the likelihood that your webpage will appear in the results for relevant searh engine (Google, Ecosia, Bing, etc.) searches. Search engines parse the HTML of webpages for key words, looking in the <code>title</code>, header (<code>h1</code> – <code>h6</code>) tags and the <code>img</code> <code>alt</code> text. You can also directly provide these key words by adding a <code>description</code> for your page (and naming yourself as the author, while you're at it).
+        </p>
+        <p>
+            Add the following <code>meta</code> tags in the <code>&lt;head>&lt;/head></code> of you HTML document, filling in your own information as necessary. It is best practice to keep the description under 105 characters:
+        </p>
+        <div class="codeblock">
+            &lt;head><br>
+            &nbsp; ...<br>
+            &nbsp; &lt;meta name="description" content="Tutorial for adding title, icon, alt text, and SEO description to HTML webpages"><br>
+            &nbsp; &lt;meta name="author" content="AnneMarie Torresen">
+            &nbsp; ...<br>
+            &lt;/head>
+        </div>
+        <p>
+            Also, if you <em>don't</em> want your page to appear in search engine results, you can include the following in your HTML <code>&lt;head>&lt;/head></code>:
+        </p>
+        <div class="codeblock">
+            &lt;head><br>
+            &nbsp; ...<br>
+            &nbsp; &lt;meta name="robots" content="noindex"><br>
+            &nbsp; ...<br>
+            &lt;/head>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

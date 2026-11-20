@@ -50,7 +50,7 @@
             The horizontal x-axis numbers increase from left to right.
             The vertical y-axis numbers increase from top to bottom.
         </p>
-        <img src="images/coordinates.png" alt="An illustration of the p5.js default coordinate system that places the origin in the top left corner of the canvas">
+        <img src="images/coordinates.png" alt="An illustration of the p5.js default coordinate system that places the origin in the top left corner of the canvas" class="standard">
         <br>
         <br>
         <p>
@@ -68,7 +68,8 @@
                 Make an account and complete email verification if necessary.
             </li>
             <li>
-                TODO: step for saving/naming sketches
+                Save sketches via File>Save or Cmd+S. Click the file name to rename the sketch. You can access saved sketches in the top right corner, under "My Sketches."
+                <img src="images/p5_save_sketch.png" alt="A screenshot showing a p5.js sketch file name and the menu showing My Sketches" class="standard">
             </li>
         </ol>
     </div>
@@ -79,23 +80,23 @@
         </p>
         <figure>
             <figcaption>sketch_1</figcaption>
-            <img src="images/p5sketch/1.png" alt="Gray rectangle with red border">
+            <img src="images/p5sketch/1.png" alt="Gray rectangle with red border" class="standard">
         </figure>
         <figure>
             <figcaption>sketch_2</figcaption>
-            <img src="images/p5sketch/2.png" alt="Green circle on green canvas">
+            <img src="images/p5sketch/2.png" alt="Green circle on green canvas" class="standard">
         </figure>
         <figure>
             <figcaption>sketch_3</figcaption>
-            <img src="images/p5sketch/3.png" alt="Three red dots on brown">
+            <img src="images/p5sketch/3.png" alt="Three red dots on brown" class="standard">
         </figure>
         <figure>
             <figcaption>sketch_4</figcaption>
-            <img src="images/p5sketch/4.png" alt="Black and blue background with transparent red stripes">
+            <img src="images/p5sketch/4.png" alt="Black and blue background with transparent red stripes" class="standard">
         </figure>
         <figure>
             <figcaption>sketch_5</figcaption>
-            <img src="images/p5sketch/5.png" alt="Little creature on pink background">
+            <img src="images/p5sketch/5.png" alt="Little creature on pink background" class="standard">
         </figure>
         <p>
             If/when you get stuck, refer to the <a href="https://p5js.org/reference/">p5.js reference pages</a>, ask classmates for help, or watch the following <em>Coding Train</em> video tutorials:
@@ -117,17 +118,98 @@
     </div>
     <div class="content">
         <h1>setup() and draw()</h1>
+        <p>
+            The <code>setup()</code> and <code>draw()</code> functions create the canvas that we see on the right of the p5.js editor.
+        </p>
+        <p>
+            When you run the code, <code>setup()</code> runs once and <code>draw()</code> loops continuously.
+        </p>
         
     </div>
     <div class="content">
         <h1>Variables and random() Values</h1>
+        <p>
+            A <b>variable</b> is a named container that stores a value. It is best practice to give your variables descriptive names.
+        </p>
+        <p>
+            Variables have different <b>scope</b> depending on where in the code they are introduced, or “declared.” Global variables – declared outside of any functions – can be used throughout the code. Local variables – declared inside a function – can only be used in the function in which it is declared.
+        </p>
+        <p>
+            Declare a variable using the key word <code>let</code>. Assign a value to the variable using <code>=</code>.
+        </p>
         <div class="codeblock">
-            // code after two forward slashes is a comment
+            let r = 100;<br>
+            <br>
+            <span class="comment">// or (text after two forward slashes becomes a comment)</span><br>
+            <br>
+            let r;<br>
+            r = 100;
         </div>
+        <p>
+            <b>Exercise:</b> Create three global variables – r, g, and b – to define the RGB values of the canvas background color.
+        </p>
+        <p>
+            The <code>random()</code> function returns a random value between an upper and lower limit, passed in as arguments:
+        </p>
+        <div class="codeblock">
+            <span class="comment">// get a random number between 0 and 255</span><br>
+            let r = random(0, 255);
+        </div>
+        <p>
+            <b>Exercise:</b> Use random() to give the background a new random color each time you run the code.
+        </p>
     </div>
     <div class="content">
         <h1>p5.js in HTML</h1>
-        
+            <p>
+                The p5.js editor is a convenient tool for coding right in your browser, but you may also want to embed p5.js graphics in your own custom HTML webpages. Here is how to do that:
+            </p>
+            <ol>
+                <li>
+                    In your webpage project folder, create a new file named <code>sketch.js</code>. This is a JavaScript file that will hold your p5.js code.
+                </li>
+                <li>
+                    Add the following <code>script</code> tags to you html file. The first one links to the p5.js code library, adn the second links to your new local <code>sketch.js</code> file:
+                    <div class="codeblock">
+                        &lt;script src="https://cdn.jsdelivr.net/npm/p5@2.4.0/lib/p5.min.js">&lt;/script><br>
+                        &lt;script src="sketch.js">&lt;/script>
+                    </div>
+                    Note: <a href="https://p5js.org/download/#:~:text=Use%20p5%2Ejs%20from%20CDN">check the documentation</a> because this^ link may change with new p5.js releases
+                </li>
+                <li>
+                    Create an empty <code>div</code> where you want your sketch to go in your HTML file, and give it an <code>id</code>, like this:
+                    <div class="codeblock">
+                        &lt;div id="mySketch">&lt;/div>
+                    </div>
+                </li>
+                <li>
+                    In your <code>sketch.js</code> file, paste in the code for your p5.js sketch.
+                </li>
+                <li>
+                    Then, we need to make two changes in the <code>setup()</code> function to make your sketch show up in your html page:
+                    <ul>
+                        <li>define a variable to hold your canvas</li>
+                        <li>set your "mySketch" <code>div</code> to be a "parent" container that holds the canvas</li>
+                    </ul>
+                    That looks like this:
+                    <div class="codeblock">
+                        function setup() {<br>
+                        &nbsp; <span class="comment">// define a variable to hold your canvas</span><br>
+                        &nbsp; var myCanvas = createCanvas(400, 400);<br>
+                        &nbsp; ...<br>
+                        &nbsp; <span class="comment">// place your canvas inside the parent div with id="mySketch"</span><br>
+                        &nbsp; myCanvas.parent("mySketch");<br>
+                        }<br>
+                        <br>
+                        function draw() {<br>
+                        &nbsp; <span class="comment">// your sketch code</span><br>
+                        }
+                    </div>
+                </li>
+                <li>
+                    Save all of your files. When you open your html file in your browser, you should see your sketch!
+                </li>
+            </ol>
     </div>
     <script src="script.js"></script>
 </body>
