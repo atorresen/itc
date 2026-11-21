@@ -96,6 +96,8 @@ button:hover {
 }
 
 table {
+    table-layout: fixed;
+    word-wrap: break-word;
     width: 100%;
 }
 
